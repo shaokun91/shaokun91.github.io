@@ -1,11 +1,4 @@
----
-permalink: /
-title: 
-author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
----
+
 
 I am currently a principal research scientist and AI Agent team lead at Huawei London Research
 Centre, working with [Prof. Jun Wang](https://scholar.google.com.hk/citations?user=RxvYlNQAAAAJ&hl=wIE1tY4AAAAJ&hl=en) and [Prof. Jianye Hao](https://scholar.google.com.hk/citations?user=RxvYlNQAAAAJ&hl=FCJVUYgAAAAJ&hl=en), focusing on AI Agent, reinforcement
