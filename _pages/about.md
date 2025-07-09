@@ -6,17 +6,12 @@ redirect_from:
   - /about/
   - /about.html
 ---
+I am a Principal Research Scientist and AI Agent Team Lead at the Huawei London Research Centre, collaborating with [Prof. Jun Wang](https://scholar.google.com/citations?user=wIE1tY4AAAAJ&hl=en) and [Prof. Jianye Hao](https://scholar.google.com/citations?user=FCJVUYgAAAAJ&hl=en). My research focuses on LLM-based AI Agent, reinforcement learning, and multi-agent systems, with applications in AI Search, GUI Agent, Game AI, Autonomous Driving, Recommendation Systems, and so on.
 
-I am currently a principal research scientist and AI Agent team lead at Huawei London Research
-Centre, working with [Prof. Jun Wang](https://scholar.google.com/citations?user=wIE1tY4AAAAJ&hl=en) and [Prof. Jianye Hao](https://scholar.google.com/citations?user=FCJVUYgAAAAJ&hl=en), focusing on AI Agent, reinforcement
-learning, and multi-agent systems, with applications in search, mobile devices, game AI, autonomous driving,
-recommendation systems, and related domains. 
+I received my Ph.D. in Artificial Intelligence in 2019 from the Institute of Automation, Chinese Academy of Sciences (advisor: [Prof. Dongbin
+Zhao](https://scholar.google.com/citations?user=RxvYlNQAAAAJ&hl=en)), where my work centered on reinforcement learning and multi-agent systems.
 
-Previously, I got my Ph.D. in Artificial Intelligence
-from the Institute of Automation, Chinese Academy of Sciences in 2019, where I worked with [Prof. Dongbin
-Zhao](https://scholar.google.com/citations?user=RxvYlNQAAAAJ&hl=en) on reinforcement learning and multi-agent system.
-
-I am recruiting research scientists/research engineers/research interns working on AI Agent, reinforcement learning and foundation models in UK and China. 
+I am actively seeking Research Scientists, Research Engineers, and Research Interns to join my team in the UK and China. Candidates with expertise in AI Agents, reinforcement learning, or foundation models are encouraged to apply.
 
 <!-- 
 A data-driven personal website
