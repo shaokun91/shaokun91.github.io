@@ -13,7 +13,7 @@ main:
 
   - title: "Talks"
     url: /talks/    
-
+<!-- 
   - title: "Teaching"
     url: /teaching/    
     
@@ -31,3 +31,4 @@ main:
     
   - title: "Guide"
     url: /markdown/
+-->
