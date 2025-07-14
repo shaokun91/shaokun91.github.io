@@ -6,7 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am a Principal Research Scientist and AI Agent Team Lead at the Huawei London Research Centre, collaborating with [Prof. Jun Wang](https://scholar.google.com/citations?user=wIE1tY4AAAAJ&hl=en) and [Prof. Jianye Hao](https://scholar.google.com/citations?user=FCJVUYgAAAAJ&hl=en). My research focuses on LLM-based AI Agent, reinforcement learning, and multi-agent systems, with applications in AI Search, GUI Agent, Game AI, Autonomous Driving, Recommendation Systems, and so on.
+I am a Principal Research Scientist and AI Agent Team Lead at the Huawei London Research Centre, collaborating with [Prof. Jun Wang](https://scholar.google.com/citations?user=wIE1tY4AAAAJ&hl=en) and [Prof. Jianye Hao](https://scholar.google.com/citations?user=FCJVUYgAAAAJ&hl=en). My research focuses on LLM-based AI Agent, reinforcement learning, and multi-agent systems, with applications in Deep Research, GUI Agent, Game AI, Autonomous Driving, Recommendation Systems, and so on.
 
 I received my Ph.D. in Artificial Intelligence in 2019 from the Institute of Automation, Chinese Academy of Sciences (advisor: [Prof. Dongbin
 Zhao](https://scholar.google.com/citations?user=RxvYlNQAAAAJ&hl=en)), where my work centered on reinforcement learning and multi-agent systems.
