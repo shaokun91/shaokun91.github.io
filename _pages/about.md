@@ -6,55 +6,376 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am a Tech Expert and AI Agent Team Lead at the Huawei London Research Centre, collaborating with [Prof. Jun Wang](https://scholar.google.com/citations?user=wIE1tY4AAAAJ&hl=en) and [Prof. Jianye Hao](https://scholar.google.com/citations?user=FCJVUYgAAAAJ&hl=en). My research focuses on LLM-based AI Agent, reinforcement learning, and multi-agent systems, with applications in Deep Research, GUI Agent, Game AI, Autonomous Driving, Recommendation Systems, and so on.
 
-I received my Ph.D. in Artificial Intelligence in 2019 from the Institute of Automation, Chinese Academy of Sciences (advisor: [Prof. Dongbin
-Zhao](https://scholar.google.com/citations?user=RxvYlNQAAAAJ&hl=en)), where my work centered on reinforcement learning and multi-agent systems.
+<style>
+.section-title {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #2c3e50;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 0.3em;
+  margin-top: 2em;
+  margin-bottom: 0.8em;
+}
+.section-title .fa, .section-title .ai {
+  margin-right: 0.4em;
+  color: #3498db;
+}
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.8em;
+  margin: 1em 0;
+}
+.highlight-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-left: 4px solid #3498db;
+  padding: 0.7em 1em;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.92em;
+  transition: transform 0.2s ease;
+}
+.highlight-card:hover {
+  transform: translateX(4px);
+}
+.highlight-card .fa {
+  color: #e74c3c;
+  margin-right: 0.3em;
+}
+.timeline-item {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 1.5em;
+  border-left: 2px solid #3498db;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  background: #3498db;
+  border-radius: 50%;
+}
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.timeline-org {
+  font-weight: 700;
+  font-size: 1.05em;
+  color: #2c3e50;
+}
+.timeline-role {
+  color: #555;
+  font-style: italic;
+}
+.timeline-date {
+  color: #888;
+  font-size: 0.9em;
+}
+.timeline-details {
+  margin-top: 0.3em;
+  font-size: 0.92em;
+  color: #444;
+}
+.timeline-details strong {
+  color: #2c3e50;
+}
+.pub-year {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #3498db;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+}
+.pub-list {
+  list-style: none;
+  padding: 0;
+}
+.pub-list li {
+  padding: 0.4em 0;
+  padding-left: 1.2em;
+  position: relative;
+  font-size: 0.9em;
+  line-height: 1.5;
+  border-bottom: 1px solid #f0f0f0;
+}
+.pub-list li::before {
+  content: '\f15c';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: #3498db;
+  font-size: 0.8em;
+}
+.pub-venue {
+  font-weight: 600;
+  color: #e74c3c;
+}
+.pub-note {
+  display: inline-block;
+  background: #e74c3c;
+  color: white;
+  font-size: 0.75em;
+  padding: 0.1em 0.5em;
+  border-radius: 3px;
+  margin-left: 0.3em;
+  vertical-align: middle;
+}
+.award-list {
+  list-style: none;
+  padding: 0;
+}
+.award-list li {
+  padding: 0.4em 0;
+  padding-left: 1.5em;
+  position: relative;
+  font-size: 0.92em;
+  border-bottom: 1px solid #f5f5f5;
+}
+.award-list li::before {
+  content: '\f091';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: #f39c12;
+}
+.award-date {
+  color: #888;
+  font-size: 0.85em;
+  float: right;
+}
+.talk-list {
+  list-style: none;
+  padding: 0;
+}
+.talk-list li {
+  padding: 0.3em 0;
+  padding-left: 1.5em;
+  position: relative;
+  font-size: 0.92em;
+}
+.talk-list li::before {
+  content: '\f130';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: #9b59b6;
+  font-size: 0.85em;
+}
+.bio-intro {
+  font-size: 0.95em;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 1em;
+}
+.bio-intro a {
+  color: #3498db;
+}
+.hiring-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.8em 1.2em;
+  border-radius: 8px;
+  margin: 1em 0;
+  font-size: 0.92em;
+}
+.hiring-banner .fa {
+  margin-right: 0.4em;
+}
+</style>
 
-I am actively seeking Research Scientists, Research Engineers, and Research Interns to join my team in the UK and China. Candidates with expertise in AI Agents, reinforcement learning, or foundation models are encouraged to apply.
+<div class="bio-intro">
+Tech Expert at <strong>Beijing Xiaomi Mobile Software Co., Ltd</strong>, leading the AI Agent team. Previously Tech Expert and AI Agent Team Lead at <strong>Huawei London Research Centre</strong>, working with <a href="https://scholar.google.com/citations?user=FCJVUYgAAAAJ&hl=en">Prof. Jianye Hao</a> and <a href="https://scholar.google.com/citations?user=wIE1tY4AAAAJ&hl=en">Prof. Jun Wang</a>. Ph.D. from the <strong>Institute of Automation, Chinese Academy of Sciences</strong> (advisor: <a href="https://scholar.google.com/citations?user=RxvYlNQAAAAJ&hl=en">Prof. Dongbin Zhao</a>).
+<br><br>
+Research focus: <strong>Agentic AI</strong> — framework, memory, reinforcement learning, and multi-agent systems — with production deployments on smartphones, automotive cockpits, and smart glasses. <strong>50+ publications</strong> (Nature MI, ICLR, CVPR, NeurIPS, ICML), <strong>3,000+ citations</strong>.
+</div>
 
-<!-- 
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured Markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various Markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+<div class="hiring-banner">
+<i class="fa fa-bullhorn"></i> <strong>Hiring:</strong> I am actively seeking Research Scientists, Research Engineers, and Research Interns to join my team in the UK and China. Candidates with expertise in AI Agents, reinforcement learning, or foundation models are encouraged to apply.
+</div>
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your Markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the Markdown files! You can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+<h2 class="section-title"><i class="fa fa-star"></i>Research Highlights</h2>
 
-For those users that need more advanced functionality, the template also supports the following popular tools:
-- [MathJax](https://www.mathjax.org/) for mathematical equations
-- [Mermaid](https://mermaid.js.org/) for diagraming
-- [Plotly](https://plotly.com/javascript/) for plotting
+<div class="highlight-grid">
+  <div class="highlight-card"><i class="fa fa-trophy"></i> <strong>2x Benchmark #1:</strong> AndroidWorld (GUI Agent, 2025) & GAIA (Deep Research Agent, June 2025)</div>
+  <div class="highlight-card"><i class="fa fa-flask"></i> <strong>Nature MI 2026:</strong> LLM-based robot OS framework for embodied AI</div>
+  <div class="highlight-card"><i class="fa fa-code-branch"></i> <strong>HarnessX:</strong> Open-source agent harness & self-evolution system at Xiaomi</div>
+  <div class="highlight-card"><i class="fa fa-star"></i> <strong>2,000+ GitHub Stars</strong> on Deep Research agent toolkit</div>
+  <div class="highlight-card"><i class="fa fa-pen-fancy"></i> <strong>10+ Corresponding-Author Papers</strong> at ICLR / CVPR / NeurIPS / ICML (2024-2026)</div>
+  <div class="highlight-card"><i class="fa fa-lightbulb"></i> <strong>10+ Patents</strong> across GUI Agent, Agentic RL, game AI, autonomous driving; 1 monograph</div>
+</div>
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+<h2 class="section-title"><i class="fa fa-briefcase"></i>Work Experience</h2>
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+<div class="timeline-item">
+  <div class="timeline-header">
+    <span class="timeline-org">Beijing Xiaomi Mobile Software Co., Ltd.</span>
+    <span class="timeline-date">Feb. 2026 – Present</span>
+  </div>
+  <div class="timeline-role">Tech Expert & AI Agent Team Lead · Beijing</div>
+  <div class="timeline-details">
+    Leading the AI Agent team, driving agent architecture design and product deployment for Xiaomi's Xiaoai assistant across mobile, automotive, and wearable platforms.
+    <br><br>
+    <strong>(1) HarnessX — Transform. Compose. Evolve.</strong> Open-sourced a composable agent orchestration framework. Nine orthogonal dimensions are independently configurable, replaceable, and optimizable, supporting meta-optimization and RL-based agent evolution.
+    <br><br>
+    <strong>(2) Agent Memory System</strong> — Led research and production deployment of agentic memory for Xiaoai. Built full-stack architecture (multiple-layer storage, hybrid retrieval, lifecycle management with time-decay). Deployed on Xiaomi's intelligent automotive cockpit and smart glasses.
+    <br><br>
+    <strong>(3) Agent World Model Research</strong> — Led multi-agent and world-model research; survey paper under review; multi-agent paper preparing for Nature Machine Intelligence.
+  </div>
+</div>
 
-Create content & metadata
-------
-For site content, there is one Markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a Markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each Markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+<div class="timeline-item">
+  <div class="timeline-header">
+    <span class="timeline-org">Huawei London Research Centre</span>
+    <span class="timeline-date">July 2022 – Jan. 2026</span>
+  </div>
+  <div class="timeline-role">Tech Expert & AI Agent Team Lead · London</div>
+  <div class="timeline-details">
+    Led research on LLM/VLM-based AI Agents, covering agentic frameworks, reinforcement fine-tuning, planning & reasoning, tool-use, and memory.
+    <br><br>
+    <strong>(1) GUI Agent for Mobile Phone Control</strong> — Built Huawei's GUI Agent from scratch. Key innovations: scalable data-generation pipelines; lightweight action models (AppVLM, Lightweight Neural App Control — <em>ICLR Spotlight 2025</em>); agentic RL (DistRL — <em>ICLR 2025</em>); visual world models (ViMo — <em>ICLR 2026</em>); action semantics learning (<em>CVPR 2026</em>). Achieved <strong>1st place on AndroidWorld</strong>. 10+ papers as corresponding author.
+    <br><br>
+    <strong>(2) Deep Research Agent</strong> — Pioneered general-purpose agentic systems for complex, multi-step tasks. Achieved <strong>1st place on GAIA benchmark</strong> (June 2024). Open-source toolkit: 2,000+ GitHub stars.
+    <br><br>
+    <strong>(3) London–HQ Cooperation Owner</strong> — Strategic alignment between London Research Center and HQ on key landing projects.
+  </div>
+</div>
 
-**Markdown generator**
+<div class="timeline-item">
+  <div class="timeline-header">
+    <span class="timeline-org">Huawei Noah's Ark Lab</span>
+    <span class="timeline-date">July 2019 – July 2022</span>
+  </div>
+  <div class="timeline-role">Principal Research Scientist · Beijing</div>
+  <div class="timeline-details">
+    <strong>(1) Population-based RL & Game AI</strong> — Diverse policy generation; production game AI and autonomous-driving simulation (SMARTS — <em>Best System Paper, CoRL 2020</em>).
+    <br>
+    <strong>(2) Multi-Agent RL</strong> — Credit assignment, knowledge transfer, opponent modeling (NeurIPS 2022, ICML 2020, ICRA 2022).
+    <br>
+    <strong>(3) Large-Scale Optimization</strong> — RL and MARL solutions for EDA and recommendation domains.
+  </div>
+</div>
 
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual Markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the Markdown files, then commit and push them to the GitHub repository.
+<h2 class="section-title"><i class="fa fa-graduation-cap"></i>Education</h2>
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and Markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+<div class="timeline-item">
+  <div class="timeline-header">
+    <span class="timeline-org">Institute of Automation, Chinese Academy of Sciences (CASIA)</span>
+    <span class="timeline-date">Sept. 2014 – Jun. 2019</span>
+  </div>
+  <div class="timeline-role">Ph.D. in Artificial Intelligence</div>
+</div>
 
-Example: editing a Markdown file for a talk
-![Editing a Markdown file for a talk](/images/editing-talk.png)
+<div class="timeline-item">
+  <div class="timeline-header">
+    <span class="timeline-org">Beijing Jiaotong University (BJTU)</span>
+    <span class="timeline-date">Sept. 2010 – Jul. 2014</span>
+  </div>
+  <div class="timeline-role">B.Eng in Automation</div>
+</div>
 
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
--->
+<h2 class="section-title"><i class="fa fa-file-lines"></i>Selected Publications</h2>
+
+<p style="font-size:0.9em; color:#666;">
+<i class="ai ai-google-scholar" style="color:#4285F4;"></i> Full list: <a href="https://scholar.google.com/citations?user=4CNMLWAAAAAJ&hl=en">Google Scholar</a> · 50+ papers · 3,000+ citations
+</p>
+
+<div class="pub-year">2026</div>
+<ul class="pub-list">
+<li>C.E. Mower, ..., <strong>K. Shao</strong>, et al. A robot operating system framework for using LLMs in embodied AI. <span class="pub-venue">Nature Machine Intelligence</span>, 8: 313–325, 2026.</li>
+<li>D. Luo, B. Tang, ..., J. Hao, J. Wang, <strong>K. Shao</strong>. ViMo: A Generative Visual GUI World Model for App Agent. <span class="pub-venue">ICLR 2026</span>. <span class="pub-note">Corresponding Author</span></li>
+<li>B. Tang, D. Luo, ..., J. Hao, J. Wang, <strong>K. Shao</strong>. Beyond Syntax: Action Semantics Learning for App Agents. <span class="pub-venue">CVPR 2026</span>. <span class="pub-note">Corresponding Author</span></li>
+<li>Z. Wu, D. Mo, ..., K. Li, <strong>K. Shao</strong>, J. Hao. K²-Agent: Co-Evolving Know-What and Know-How for Hierarchical Mobile Device Control. <span class="pub-venue">ICLR 2026</span>.</li>
+<li>Z. Zhou, Z. Liu, ..., <strong>K. Shao</strong>, D. Jin, F. Xu. ResMAS: Resilience Optimization in LLM-based Multi-agent Systems. <span class="pub-venue">AAAI 2026</span>.</li>
+<li>Y. Li, L. Li, ..., J. Hao, <strong>K. Shao</strong>, F. Xu. AgentSwift: Efficient LLM Agent Design via Value-guided Hierarchical Search. <span class="pub-venue">AAAI 2026</span>.</li>
+<li>H. Liang, J. Hao, ..., <strong>K. Shao</strong>, et al. AFE-Master: Enhancing LLM-Driven Autonomous Feature Engineering. <span class="pub-venue">WWW 2026</span>.</li>
+</ul>
+
+<div class="pub-year">2025</div>
+<ul class="pub-list">
+<li>F. Christianos, G. Papoudakis, T. Coste, J. Hao, J. Wang, <strong>K. Shao</strong>. Lightweight Neural App Control. <span class="pub-venue">ICLR 2025</span>. <span class="pub-note">Spotlight</span> <span class="pub-note">Corresponding Author</span></li>
+<li>J. Chen, D. Yuen, ..., <strong>K. Shao</strong>. SPA-Bench: A Comprehensive Benchmark for Smartphone Agent Evaluation. <span class="pub-venue">ICLR 2025</span>. <span class="pub-note">Spotlight</span> <span class="pub-note">Corresponding Author</span></li>
+<li>T. Wang, Z. Wu, J. Liu, J. Hao, J. Wang, <strong>K. Shao</strong>. DistRL: Asynchronous Distributed RL for On-Device Control Agents. <span class="pub-venue">ICLR 2025</span>. <span class="pub-note">Corresponding Author</span></li>
+<li>G. Papoudakis, T. Coste, J. Hao, J. Wang, <strong>K. Shao</strong>. Succeed or Learn Slowly: Sample Efficient Off-Policy RL for Mobile App Control. <span class="pub-venue">NeurIPS 2025</span>. <span class="pub-note">Corresponding Author</span></li>
+<li>J. Hu, Z. Cheng, S. Gong, ..., J. Hao, J. Wang, <strong>K. Shao</strong>. Uncertainty-quantified Rollout Policy Adaptation for Cross-domain Temporal Grounding. <span class="pub-venue">NeurIPS 2025</span>. <span class="pub-note">Corresponding Author</span></li>
+<li>S. Huang, L. Yang, ..., <strong>K. Shao</strong>, et al. ThinkBench: Dynamic Out-of-Distribution Evaluation for Robust LLM Reasoning. <span class="pub-venue">NeurIPS 2025</span>.</li>
+<li>G. Li, N. Tsagkas, ..., <strong>K. Shao</strong>, L. Sevilla-Lara. Learning Precise Affordances from Egocentric Videos for Robotic Manipulation. <span class="pub-venue">ICCV 2025</span>. <span class="pub-note">Corresponding Author</span></li>
+<li>T. Jafferjee, J. Ziomek, ..., <strong>K. Shao</strong>, J. Wang. Taming Multi-Agent RL with Estimator Variance Reduction. <span class="pub-venue">AAMAS 2025</span>.</li>
+</ul>
+
+<div class="pub-year">2024</div>
+<ul class="pub-list">
+<li>Z. Xiong, R. Vuorio, J. Beck, M. Zimmer, <strong>K. Shao</strong>, S. Whiteson. Distilling Morphology-Conditioned Hypernetworks for Efficient Universal Morphology Control. <span class="pub-venue">ICML 2024</span>.</li>
+<li>H. Li, W. Huang, ..., <strong>K. Shao</strong>, J. Wang, X. Deng. A Survey on Algorithms for Nash Equilibria in Finite Normal-Form Games. <span class="pub-venue">Computer Science Review</span>, vol. 51, 2024.</li>
+</ul>
+
+<div class="pub-year">2023</div>
+<ul class="pub-list">
+<li>X. Feng, Y. Luo, ..., <strong>K. Shao</strong>, D. Mguni, Y. Du, J. Wang. ChessGPT: Bridging Policy Learning and Language Modeling. <span class="pub-venue">NeurIPS 2023</span>.</li>
+<li>H. Chen, J. Wang, <strong>K. Shao</strong>, et al. Traj-MAE: Masked Autoencoders for Trajectory Prediction. <span class="pub-venue">ICCV 2023</span>.</li>
+<li>D. Mguni, A. Sootla, ..., <strong>K. Shao</strong>, J. Wang. Timing is Everything: Learning to Act Selectively with Costly Actions. <span class="pub-venue">ICLR 2023</span>.</li>
+<li>D. Mguni, T. Jafferjee, ..., M. Taylor, <strong>K. Shao</strong>. Learning to Shape Rewards Using a Game of Two Partners. <span class="pub-venue">AAAI 2023</span>.</li>
+<li>T. Zhou, F. Zhang, <strong>K. Shao</strong>, et al. Cooperative Multiagent Transfer Learning with Coalition Pattern Decomposition. <span class="pub-venue">IEEE Trans. on Games</span>, 2023.</li>
+</ul>
+
+<div class="pub-year">2022</div>
+<ul class="pub-list">
+<li>W. Huang, K. Li, <strong>K. Shao</strong>, et al. Multiagent Q-Learning with Sub-Team Coordination. <span class="pub-venue">NeurIPS 2022</span>.</li>
+<li>J. Miao, T. Zhou, <strong>K. Shao</strong>, et al. Promoting Quality and Diversity in Population-Based RL. <span class="pub-venue">ICRA 2022</span>.</li>
+<li>Z. Dai, T. Zhou, <strong>K. Shao</strong>, D.H. Mguni. Socially-Attentive Policy Optimization in Multi-Agent Self-Driving. <span class="pub-venue">CoRL 2022</span>.</li>
+</ul>
+
+<p style="font-size:0.85em; color:#888; margin-top:0.5em;">
+<strong>Selected preprints:</strong>
+Deep Research Agents: A Systematic Examination and Roadmap (2025);
+Pangu-Agent: A Fine-tunable Generalist Agent with Structured Reasoning (2024);
+GUI Agents with Foundation Models: A Comprehensive Survey (2024);
+Memento: Fine-tuning LLM Agents Without Fine-tuning LLMs (2025).
+</p>
+
+<h2 class="section-title"><i class="fa fa-book"></i>Book & Patents</h2>
+
+**Book:** *Artificial Intelligence Methods in Games* — Dongbin Zhao, Yuanheng Zhu, Zhentao Tang, **Kun Shao**. Science Press, 2024.
+
+**Patents (10+ granted/applied):** GUI World Model for App Agent (2025); Hierarchical RL for AppAgent (2025); Nash Equilibrium via Conditional Gradient (2024); Game AI Framework on ModelArts (2021); Diverse Scenarios for Intelligent Driving (2020).
+
+<h2 class="section-title"><i class="fa fa-microphone"></i>Invited Talks</h2>
+
+<ul class="talk-list">
+<li>The 20th Chinese Conference on Machine Learning (CCML), Taiyuan, 2025</li>
+<li>Beijing Institute for General Artificial Intelligence, Beijing, 2025</li>
+<li>National University of Singapore (NUS), Singapore, 2025</li>
+<li>The 1st International Workshop on AI Agent Reasoning and Decision-Making, 2025</li>
+<li>Robotics and AI, Department of Computer Science, UCL, London, 2025</li>
+<li>Shanghai AI Lab, Shanghai, 2025</li>
+<li>Department of Electronic Engineering, Tsinghua University, Beijing, 2024</li>
+<li>RLChina, Guangzhou, 2024</li>
+</ul>
+
+<h2 class="section-title"><i class="fa fa-trophy"></i>Honors & Awards</h2>
+
+<ul class="award-list">
+<li>Team Gold Medal Award of Huawei 2012 Lab <span class="award-date">Dec. 2025</span></li>
+<li>Excellent Contributor of Huawei European Research Institute <span class="award-date">Nov. 2025</span></li>
+<li>President's Award — Significant Business Contribution of Huawei Europe <span class="award-date">Sep. 2024</span></li>
+<li>2nd Prize, Beijing Science and Technology Progress Award <span class="award-date">Oct. 2023</span></li>
+<li>Outstanding Individual Contribution Award of Huawei LRC <span class="award-date">Dec. 2023</span></li>
+<li>President's Team Award of Huawei CRI <span class="award-date">Dec. 2021</span></li>
+<li>Commended Student Award of CASIA <span class="award-date">Jul. 2018</span></li>
+<li>Outstanding Paper Award — IEEE TETCI <span class="award-date">2018</span></li>
+<li>Outstanding Paper Award — Control Theory & Applications <span class="award-date">2016</span></li>
+</ul>
+
+<h2 class="section-title"><i class="fa fa-clipboard-check"></i>Professional Service</h2>
+
+**Conference Reviewer:** ICCV 2025, ICML 2023–2025, ICLR 2023–2025, NeurIPS 2023–2025, AAAI 2024
+
+**Journal Reviewer:** IEEE TNNLS 2024–2025
