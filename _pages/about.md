@@ -228,7 +228,7 @@ Research focus: <strong>Agentic AI</strong> — framework, memory, reinforcement
     <br><br>
     <strong>(2) Agent Memory System</strong> — Led research and production deployment of agentic memory for Xiaoai. Built full-stack architecture (multiple-layer storage, hybrid retrieval, lifecycle management with time-decay). Deployed on Xiaomi's intelligent automotive cockpit and smart glasses.
     <br><br>
-    <strong>(3) Agent World Model Research</strong> — Led multi-agent and world-model research; survey paper under review; multi-agent paper preparing for Nature Machine Intelligence.
+    <strong>(3) Agent World Model Research</strong> — Led multi-agent and world-model research; multi-agent paper preparing for Nature Machine Intelligence.
   </div>
 </div>
 
@@ -333,13 +333,6 @@ Research focus: <strong>Agentic AI</strong> — framework, memory, reinforcement
 <li>Z. Dai, T. Zhou, <strong>K. Shao</strong>, D.H. Mguni. Socially-Attentive Policy Optimization in Multi-Agent Self-Driving. <span class="pub-venue">CoRL 2022</span>.</li>
 </ul>
 
-<p style="font-size:0.85em; color:#888; margin-top:0.5em;">
-<strong>Selected preprints:</strong>
-Deep Research Agents: A Systematic Examination and Roadmap (2025);
-Pangu-Agent: A Fine-tunable Generalist Agent with Structured Reasoning (2024);
-GUI Agents with Foundation Models: A Comprehensive Survey (2024);
-Memento: Fine-tuning LLM Agents Without Fine-tuning LLMs (2025).
-</p>
 
 <h2 class="section-title"><i class="fa fa-book"></i>Book & Patents</h2>
 
@@ -373,9 +366,3 @@ Memento: Fine-tuning LLM Agents Without Fine-tuning LLMs (2025).
 <li>Outstanding Paper Award — IEEE TETCI <span class="award-date">2018</span></li>
 <li>Outstanding Paper Award — Control Theory & Applications <span class="award-date">2016</span></li>
 </ul>
-
-<h2 class="section-title"><i class="fa fa-clipboard-check"></i>Professional Service</h2>
-
-**Conference Reviewer:** ICCV 2025, ICML 2023–2025, ICLR 2023–2025, NeurIPS 2023–2025, AAAI 2024
-
-**Journal Reviewer:** IEEE TNNLS 2024–2025
