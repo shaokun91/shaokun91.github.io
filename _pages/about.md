@@ -195,11 +195,11 @@ redirect_from:
 <div class="bio-intro">
 Tech Expert at <strong>Beijing Xiaomi Mobile Software Co., Ltd</strong>, leading the AI Agent team. Previously Tech Expert and AI Agent Team Lead at <strong>Huawei London Research Centre</strong>, working with <a href="https://scholar.google.com/citations?user=FCJVUYgAAAAJ&hl=en">Prof. Jianye Hao</a> and <a href="https://scholar.google.com/citations?user=wIE1tY4AAAAJ&hl=en">Prof. Jun Wang</a>. Ph.D. from the <strong>Institute of Automation, Chinese Academy of Sciences</strong> (advisor: <a href="https://scholar.google.com/citations?user=RxvYlNQAAAAJ&hl=en">Prof. Dongbin Zhao</a>).
 <br><br>
-Research focus: <strong>Agentic AI</strong> — Harness, framework, memory, reinforcement learning, and multi-agent systems — with production deployments on smartphones, automotive cockpits, and smart glasses&watches. <strong>50+ publications</strong> (Nature MI, ICLR, CVPR, NeurIPS, ICML), <strong>3,000+ citations</strong>.
+Research focus: <strong>Agentic AI</strong> — Harness, memory, reinforcement learning, and multi-agent systems — with production deployments on smartphones, automotive cockpits, IoT, and smart glasses&watches. <strong>50+ publications</strong> (Nature MI, ICLR, CVPR, NeurIPS, ICML), <strong>3,000+ citations</strong>.
 </div>
 
 <div class="hiring-banner">
-<i class="fa fa-bullhorn"></i> <strong>Hiring:</strong> I am actively seeking Research Scientists, Research Engineers, and Research Interns to join my team. Candidates with expertise in AI Agents, reinforcement learning, or foundation models are encouraged to apply.
+<i class="fa fa-bullhorn"></i> <strong>Hiring:</strong> I am actively seeking Research Scientists, Research Engineers, and Research Interns to join my team. Candidates with expertise in AI Agents, Agent Harness, Agentic memory, AI search, reinforcement learning, or foundation models are encouraged to apply.
 </div>
 
 <h2 class="section-title"><i class="fa fa-star"></i>Research Highlights</h2>
@@ -220,15 +220,15 @@ Research focus: <strong>Agentic AI</strong> — Harness, framework, memory, rein
     <span class="timeline-org">Beijing Xiaomi Mobile Software Co., Ltd.</span>
     <span class="timeline-date">Feb. 2026 – Present</span>
   </div>
-  <div class="timeline-role">Tech Expert & AI Agent Team Lead · Beijing</div>
+  <div class="timeline-role">Tech Expert & Team Lead · Beijing</div>
   <div class="timeline-details">
-    Leading the AI Agent team, driving agent architecture design and product deployment for Xiaomi's Xiaoai assistant across mobile, automotive, and wearable platforms.
+    Leading the AI Agent team, driving agent architecture design and product deployment for Xiaomi's Xiaoai assistant across mobile, automotive, IoT, and wearable platforms.
     <br><br>
     <strong>(1) HarnessX — Compose. Adapt. Evolve.</strong> Open-sourced a composable agent orchestration framework. Nine orthogonal dimensions are independently configurable, replaceable, and optimizable, supporting meta-optimization and RL-based agent evolution.
     <br><br>
-    <strong>(2) Agent Memory System</strong> — Led research and production deployment of agentic memory for Xiaoai. Built full-stack architecture (multiple-layer storage, hybrid retrieval, lifecycle management with time-decay). Deployed on Xiaomi's intelligent automotive cockpit and smart glasses.
+    <strong>(2) Agent Memory System</strong> — Led research and production deployment of agentic memory for Xiaoai. Built full-stack architecture (Multimodal Memory Encoding, Cross-Device Memory Persistence, Self-Evolving Lifecycle Management). Deployed on Xiaomi's intelligent automotive cockpit, smart glasses and other products.
     <br><br>
-    <strong>(3) Agent World Model Research</strong> — Led multi-agent and world-model research; test-time Agentic RL.
+    <strong>(3) Agentic AI Research</strong> — Led multi-agent and agentic world-model research; explore sample-efficient test-time Agentic RL.
   </div>
 </div>
 
@@ -237,7 +237,7 @@ Research focus: <strong>Agentic AI</strong> — Harness, framework, memory, rein
     <span class="timeline-org">Huawei London Research Centre</span>
     <span class="timeline-date">July 2022 – Jan. 2026</span>
   </div>
-  <div class="timeline-role">Tech Expert & AI Agent Team Lead · London</div>
+  <div class="timeline-role">Tech Expert & Team Lead · London</div>
   <div class="timeline-details">
     Led research on LLM/VLM-based AI Agents, covering agentic frameworks, reinforcement fine-tuning, planning & reasoning, tool-use, and memory.
     <br><br>
@@ -346,7 +346,7 @@ Research focus: <strong>Agentic AI</strong> — Harness, framework, memory, rein
 <li>The 20th Chinese Conference on Machine Learning (CCML), Taiyuan, 2025</li>
 <li>Beijing Institute for General Artificial Intelligence, Beijing, 2025</li>
 <li>National University of Singapore (NUS), Singapore, 2025</li>
-<li>The 1st International Workshop on AI Agent Reasoning and Decision-Making, 2025</li>
+<li>The 1st International Workshop on AI Agent Reasoning and Decision-Making, online, 2025</li>
 <li>Robotics and AI, Department of Computer Science, UCL, London, 2025</li>
 <li>Shanghai AI Lab, Shanghai, 2025</li>
 <li>Department of Electronic Engineering, Tsinghua University, Beijing, 2024</li>
