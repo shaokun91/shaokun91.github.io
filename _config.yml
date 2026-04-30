@@ -23,11 +23,11 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "shaokun.png"
-  name             : # "Kun Shao"
-  pronouns         : # example: "he/his"  
-  bio              : # "AI researcher"
-  location         : "London"
-  employer         : "Huawei London"
+  name             : "Kun Shao"
+  pronouns         : # example: "he/his"
+  bio              : "Tech Expert & AI Agent Team Lead"
+  location         : "Beijing"
+  employer         : "Xiaomi"
   uri              : # URL
   email            : "shaokun1991@gmail.com" 
 
@@ -80,12 +80,12 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
-  books:
-    title: 'Books'
   manuscripts:
-    title: 'Journal Articles'    
+    title: 'Journal Articles'
   conferences:
     title: 'Conference Papers'
+  preprints:
+    title: 'Preprints'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
