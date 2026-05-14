@@ -193,7 +193,7 @@ redirect_from:
 </style>
 
 <div class="bio-intro">
-Tech Expert at <strong>Beijing Xiaomi Mobile Software Co., Ltd</strong>, leading the AI Agent team. Previously Tech Expert and AI Agent Team Lead at <strong>Huawei London Research Centre</strong>, working with <a href="https://scholar.google.com/citations?user=FCJVUYgAAAAJ&hl=en">Prof. Jianye Hao</a> and <a href="https://scholar.google.com/citations?user=wIE1tY4AAAAJ&hl=en">Prof. Jun Wang</a>. Ph.D. from the <strong>Institute of Automation, Chinese Academy of Sciences</strong> (advisor: <a href="https://scholar.google.com/citations?user=RxvYlNQAAAAJ&hl=en">Prof. Dongbin Zhao</a>).
+Tech Expert at <strong>Beijing Xiaomi Mobile Software Co., Ltd</strong>, leading the Agent Research team. Previously Tech Expert and AI Agent Team Lead at <strong>Huawei London Research Centre</strong>, working with <a href="https://scholar.google.com/citations?user=FCJVUYgAAAAJ&hl=en">Prof. Jianye Hao</a> and <a href="https://scholar.google.com/citations?user=wIE1tY4AAAAJ&hl=en">Prof. Jun Wang</a>. Ph.D. from the <strong>Institute of Automation, Chinese Academy of Sciences</strong> (advisor: <a href="https://scholar.google.com/citations?user=RxvYlNQAAAAJ&hl=en">Prof. Dongbin Zhao</a>).
 <br><br>
 Research focus: <strong>Agentic AI</strong> — Harness, memory, reinforcement learning, and multi-agent systems — with production deployments on smartphones, automotive cockpits, IoT, and smart glasses&watches. <strong>50+ publications</strong> (Nature MI, ICLR, CVPR, NeurIPS, ICML), <strong>3,000+ citations</strong>.
 </div>
@@ -222,7 +222,7 @@ Research focus: <strong>Agentic AI</strong> — Harness, memory, reinforcement l
   </div>
   <div class="timeline-role">Tech Expert & Team Lead · Beijing</div>
   <div class="timeline-details">
-    Leading the AI Agent team, driving agent architecture design and product deployment for Xiaomi's Xiaoai assistant across mobile, automotive, IoT, and wearable platforms.
+    Leading the Agent Research team, driving agent architecture design and product deployment for Xiaomi's Xiaoai assistant across mobile, automotive, IoT, and wearable platforms.
     <br><br>
     <strong>(1) HarnessX — Compose. Adapt. Evolve.</strong> Open-sourced a composable agent orchestration framework. Nine orthogonal dimensions are independently configurable, replaceable, and optimizable, supporting meta-optimization and RL-based agent evolution.
     <br><br>
