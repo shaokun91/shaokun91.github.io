@@ -193,7 +193,7 @@ redirect_from:
 </style>
 
 <div class="bio-intro">
-Tech Expert at <strong>Beijing Xiaomi Mobile Software Co., Ltd</strong>, leading the Agent Research team. Previously Tech Expert and AI Agent Team Lead at <strong>Huawei London Research Centre</strong>, working with <a href="https://scholar.google.com/citations?user=FCJVUYgAAAAJ&hl=en">Prof. Jianye Hao</a> and <a href="https://scholar.google.com/citations?user=wIE1tY4AAAAJ&hl=en">Prof. Jun Wang</a>. Ph.D. from the <strong>Institute of Automation, Chinese Academy of Sciences</strong> (advisor: <a href="https://scholar.google.com/citations?user=RxvYlNQAAAAJ&hl=en">Prof. Dongbin Zhao</a>).
+Tech Expert at <strong>Beijing Xiaomi Mobile Software Co., Ltd</strong>, leading the Agent Research team <a href="https://github.com/Darwin-Agent">Darwin Agent</a>. Previously Tech Expert and AI Agent Team Lead at <strong>Huawei London Research Centre</strong>, working with <a href="https://scholar.google.com/citations?user=FCJVUYgAAAAJ&hl=en">Prof. Jianye Hao</a> and <a href="https://scholar.google.com/citations?user=wIE1tY4AAAAJ&hl=en">Prof. Jun Wang</a>. Ph.D. from the <strong>Institute of Automation, Chinese Academy of Sciences</strong> (advisor: <a href="https://scholar.google.com/citations?user=RxvYlNQAAAAJ&hl=en">Prof. Dongbin Zhao</a>).
 <br><br>
 Research focus: <strong>Agentic AI</strong> — Harness, memory, reinforcement learning, and multi-agent systems — with production deployments on smartphones, automotive cockpits, IoT, and smart glasses&watches. <strong>50+ publications</strong> (Nature MI, ICLR, CVPR, NeurIPS, ICML), <strong>3,000+ citations</strong>.
 </div>
@@ -208,6 +208,7 @@ Research focus: <strong>Agentic AI</strong> — Harness, memory, reinforcement l
   <div class="highlight-card"><i class="fa fa-trophy"></i> <strong>2x Benchmark #1:</strong> AndroidWorld (GUI Agent, 2025) & GAIA (Deep Research Agent, June 2025)</div>
   <div class="highlight-card"><i class="fa fa-flask"></i> <strong>Nature MI 2026:</strong> LLM-based robot OS framework for embodied AI</div>
   <div class="highlight-card"><i class="fa fa-code-branch"></i> <strong><a href="https://darwin-agent.github.io/HarnessX/">HarnessX</a>:</strong> Open-source agent harness & self-evolution system at Xiaomi</div>
+  <div class="highlight-card"><i class="fa fa-code-branch"></i> <strong><a href="https://darwin-agent.github.io/HarnessX/">Mi-Memory</a>:</strong> A Lifecycle Memory Framework for Personal AI at Xiaomi</div>
   <div class="highlight-card"><i class="fa fa-star"></i> <strong>2,000+ GitHub Stars</strong> on Deep Research agent toolkit</div>
   <div class="highlight-card"><i class="fa fa-pen-fancy"></i> <strong>10+ Corresponding-Author Papers</strong> at ICLR / CVPR / NeurIPS / ICML (2024-2026)</div>
   <div class="highlight-card"><i class="fa fa-lightbulb"></i> <strong>10+ Patents</strong> across GUI Agent, Agentic RL, game AI, autonomous driving; 1 monograph</div>
@@ -224,11 +225,13 @@ Research focus: <strong>Agentic AI</strong> — Harness, memory, reinforcement l
   <div class="timeline-details">
     Leading the Agent Research team, driving agent architecture design and product deployment for Xiaomi's Xiaoai assistant across mobile, automotive, IoT, and wearable platforms.
     <br><br>
-    <strong>(1) HarnessX — Compose. Adapt. Evolve.</strong> Open-sourced a composable agent orchestration framework. Nine orthogonal dimensions are independently configurable, replaceable, and optimizable, supporting meta-optimization and RL-based agent evolution.
+    <strong>(1) Agent Harness </strong> — <a href="https://darwin-agent.github.io/HarnessX/">HarnessX</a>:Compose. Adapt. Evolve. Open-sourced a composable agent orchestration framework. Nine orthogonal dimensions are independently configurable, replaceable, and optimizable, supporting meta-optimization and RL-based agent evolution.
     <br><br>
-    <strong>(2) Agent Memory System</strong> — Led research and production deployment of agentic memory for Xiaoai. Built full-stack architecture (Multimodal Memory Encoding, Cross-Device Memory Persistence, Self-Evolving Lifecycle Management). Deployed on Xiaomi's intelligent automotive cockpit, smart glasses and other products.
+    <strong>(2) Agent Memory </strong> — <a href="https://darwin-agent.github.io/HarnessX/">Mi-Memory</a>: A Lifecycle Memory Framework for Personal AI. Led research and production deployment of agentic memory for Xiaoai. Built full-stack architecture (Multimodal Memory Encoding, Cross-Device Memory Persistence, Self-Evolving Lifecycle Management). Deployed on Xiaomi's intelligent automotive cockpit, smart glasses and other products. 
     <br><br>
-    <strong>(3) Agentic AI Research</strong> — Led multi-agent and agentic world-model research; explore sample-efficient test-time Agentic RL.
+    <strong>(3) Agent World Model</strong> — <a href="https://github.com/Darwin-Agent/awesome-world-models-for-digital-agents">Awesome World Models for Digital Agents</a> Digital Agents Meet World Models: A Survey.
+    <br><br>
+    <strong>(4) Agentic AI Research</strong> — Led multi-agent and agentic world-model research; explore sample-efficient test-time Agentic RL.
   </div>
 </div>
 
