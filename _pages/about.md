@@ -210,7 +210,7 @@ Research focus: <strong>Agentic AI</strong> — Harness, memory, reinforcement l
   <div class="highlight-card"><i class="fa fa-code-branch"></i> <strong><a href="https://darwin-agent.github.io/HarnessX/">HarnessX</a>:</strong> Open-source agent harness & self-evolution system at Xiaomi</div>
   <div class="highlight-card"><i class="fa fa-code-branch"></i> <strong><a href="https://darwin-agent.github.io/HarnessX/">Mi-Memory</a>:</strong> A Lifecycle Memory Framework for Personal AI at Xiaomi</div>
   <div class="highlight-card"><i class="fa fa-star"></i> <strong>2,000+ GitHub Stars</strong> on Deep Research agent toolkit</div>
-  <div class="highlight-card"><i class="fa fa-pen-fancy"></i> <strong>10+ Corresponding-Author Papers</strong> at ICLR / CVPR / NeurIPS / ICML (2024-2026)</div>
+  <!-- <div class="highlight-card"><i class="fa fa-pen-fancy"></i> <strong>10+ Corresponding-Author Papers</strong> at ICLR / CVPR / NeurIPS / ICML (2024-2026)</div> -->
   <div class="highlight-card"><i class="fa fa-lightbulb"></i> <strong>10+ Patents</strong> across GUI Agent, Agentic RL, game AI, autonomous driving; 1 monograph</div>
 </div>
 
