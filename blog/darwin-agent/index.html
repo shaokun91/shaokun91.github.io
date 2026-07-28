@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Darwin Agent — a polished English technical blog synthesizing the self-evolving agent roadmap from the DA.pptx keynote and the Mi-Memory technical report."
+    />
+    <title>Darwin Agent: The Roadmap to Self-Evolving Agent Systems</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">DA</span>
+        <div>
+          <div class="brand-title">Darwin Agent</div>
+          <div class="brand-subtitle">Self-evolving agent systems, from harness to memory to topology</div>
+        </div>
+      </div>
+      <nav class="topnav" aria-label="Primary">
+        <a href="#thesis">Thesis</a>
+        <a href="#harness">Harness</a>
+        <a href="#memory">Memory</a>
+        <a href="#world-model">World Model</a>
+        <a href="#multi-agent">Multi-Agent</a>
+        <a href="#references">References</a>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Blog synthesis · English edition</p>
+          <h1>Darwin Agent: The Roadmap to Self-Evolving Agent Systems</h1>
+          <p class="lede">
+            This article distills the <strong>DA.pptx</strong> keynote and the
+            companion memory materials into a single English technical blog. Its
+            central argument is that the next generation of agents should be
+            engineered as <em>systems</em>—with harness, memory, prediction, and
+            interaction topology designed together—rather than prompted as isolated
+            models.
+          </p>
+
+          <div class="hero-meta" style="margin-top: 18px;">
+            <div>
+              <span class="meta-label">Author</span>
+              <span class="meta-value">Kun Shao · Darwin Agent Team</span>
+            </div>
+            <div>
+              <span class="meta-label">Published</span>
+              <span class="meta-value">2026-07-28</span>
+            </div>
+            <div>
+              <span class="meta-label">Format</span>
+              <span class="meta-value">Long-form technical blog · GitHub Pages</span>
+            </div>
+          </div>
+
+          <div class="chip-row" aria-label="Key themes">
+            <span class="chip chip-blue">Harness</span>
+            <span class="chip chip-green">Memory</span>
+            <span class="chip chip-gold">World Model</span>
+            <span class="chip chip-purple">Multi-Agent</span>
+          </div>
+
+          <div class="hero-meta">
+            <div>
+              <span class="meta-label">Source deck</span>
+              <span class="meta-value">DA.pptx · Darwin Agent</span>
+            </div>
+            <div>
+              <span class="meta-label">Companion notes</span>
+              <span class="meta-value">Mi-Memory · lifecycle memory framework</span>
+            </div>
+            <div>
+              <span class="meta-label">Angle</span>
+              <span class="meta-value">System design, memory governance, prediction, and interaction topology</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-panel">
+          <div class="panel-card panel-card-highlight">
+            <p class="panel-kicker">Core thesis</p>
+            <p class="panel-title">
+              Self-evolving agents are engineered as systems, not prompted as one-off models.
+            </p>
+            <p class="panel-text">
+              The decisive variables are no longer just model weights and prompt length.
+              They now include harness structure, memory accumulation, prediction
+              components, and the topology of multi-agent interaction.
+            </p>
+          </div>
+
+          <div class="mini-grid">
+            <div class="mini-stat">
+              <span>4</span>
+              <p>roadmap pillars</p>
+            </div>
+            <div class="mini-stat">
+              <span>1</span>
+              <p>closed-loop vision</p>
+            </div>
+            <div class="mini-stat">
+              <span>∞</span>
+              <p>iterative improvement</p>
+            </div>
+            <div class="mini-stat">
+              <span>2</span>
+              <p>source families</p>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="reading-guide">
+        <div class="guide-card">
+          <p class="section-label">Reading guide</p>
+          <div class="guide-grid">
+            <div>
+              <h3>01. Thesis</h3>
+              <p>Why agent performance should be treated as a system property, not a model-only property.</p>
+            </div>
+            <div>
+              <h3>02. Harness</h3>
+              <p>How to make agent behavior composable, serializable, and evolvable.</p>
+            </div>
+            <div>
+              <h3>03. Memory</h3>
+              <p>How memory becomes a lifecycle artifact rather than a passive cache.</p>
+            </div>
+            <div>
+              <h3>04. World Model + Multi-Agent</h3>
+              <p>How prediction and topology close the loop around action and coordination.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <p class="section-label">Abstract</p>
+        <h2>Why self-evolving agents must be designed as systems</h2>
+        <p>
+          The two source materials converge on a single design principle: durable
+          agent capability comes from the interaction between a composable harness, a
+          governed memory stack, a pluggable predictive component, and a topology-aware
+          multi-agent fabric. Each layer contributes a different kind of improvement—
+          behavioral control, continuity, anticipation, and coordination—but the value
+          of each layer only appears when the stack is engineered as a closed loop.
+        </p>
+        <div class="two-col">
+          <div class="note-card">
+            <h3>What this post emphasizes</h3>
+            <ul>
+              <li>A harness that can be inspected, compared, and evolved.</li>
+              <li>Memory that preserves provenance and supports governed change.</li>
+              <li>Prediction that informs action instead of sitting beside it.</li>
+            </ul>
+          </div>
+          <div class="note-card accent">
+            <h3>Why it matters</h3>
+            <ul>
+              <li>Improvement becomes reusable across tasks and products.</li>
+              <li>Failures become observable at the system level.</li>
+              <li>Collaboration quality depends on interaction geometry, not just scale.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="content-layout">
+        <article class="article">
+          <section id="thesis" class="content-section">
+            <p class="section-label">01 · Thesis</p>
+            <h2>From bigger models to self-evolving systems</h2>
+            <p>
+              The keynote opens with a deliberate shift in perspective: the future of
+              agents is not primarily a story about larger models or longer context
+              windows. It is a story about <strong>engineering systems that can improve
+              themselves</strong>. In this framing, the agent is not a prompt wrapped
+              around a model. It is a structured control loop that includes tools,
+              memory, evaluation, safety gates, tracing, and the rules that connect them.
+            </p>
+            <p>
+              This matters because the limitations of model-centric design are becoming
+              harder to ignore. Better prompts can help, but they do not usually produce
+              reusable improvements across tasks. A model may become stronger in
+              isolation while the surrounding interaction pattern remains brittle,
+              unsearchable, and hard to verify. Darwin Agent therefore argues that the
+              unit of progress has moved upward: from model weights to
+              <em>system structure, experience accumulation, and interaction topology</em>.
+            </p>
+
+            <blockquote>
+              <p>
+                “Self-evolving agents are engineered as systems, not prompted as one-off models.”
+              </p>
+            </blockquote>
+</section>
+
+          <section id="harness" class="content-section">
+            <p class="section-label">02 · Harness</p>
+            <h2>Harness as a first-class object</h2>
+            <p>
+              One of the most important claims in the deck is that the behavior layer
+              itself should be treated as a replaceable, inspectable object. The goal is
+              to move beyond agent frameworks where control flow is implicit, hard to
+              compare across tasks, and even harder to evolve systematically.
+            </p>
+            <p>
+              In the HarnessX view, an agent can be decomposed into a model component and
+              a harness component. That separation is not cosmetic. It creates a
+              practical basis for per-task harnesses, A/B validation, automatic search
+              over behavior variants, transfer across tasks, and a training bridge
+              between trajectory data and optimization.
+            </p>
+
+            <div class="formula-card">
+              <div class="formula">
+                agent = <span>model</span> · <span>agentic(harness)</span>
+              </div>
+              <p>
+                A clean split between <strong>ModelConfig</strong> and
+                <strong>HarnessConfig</strong> turns the control stack into a
+                configurable artifact instead of a hidden implementation detail.
+              </p>
+            </div>
+
+            <p>
+              The practical consequence is important: the same model can behave very
+              differently under different harnesses. Once the behavior stack is
+              explicit, the system can search, rank, and verify control policies the way
+              it already searches and evaluates models.
+            </p>
+
+            <div class="two-col">
+              <div class="note-card">
+                <h3>What HarnessX emphasizes</h3>
+                <ul>
+                  <li>Serializable and comparable behavior configuration.</li>
+                  <li>Composable pipelines for tools, memory, sandboxing, and traces.</li>
+                  <li>Benchmarks that evaluate the harness, not just the base model.</li>
+                  <li>A training bridge from trajectories to SFT and RL records.</li>
+                </ul>
+              </div>
+              <div class="note-card accent">
+                <h3>Why it matters</h3>
+                <ul>
+                  <li>Behavior improvements can be reused across tasks.</li>
+                  <li>Failures become analyzable at the system level.</li>
+                  <li>Evolution can be searched, ranked, and verified.</li>
+                  <li>Open-source harnesses become an ecosystem, not just a wrapper.</li>
+                </ul>
+              </div>
+            </div>
+</section>
+
+          <section id="memory" class="content-section">
+            <p class="section-label">03 · Memory</p>
+            <h2>Memory is the hidden variable of agent performance</h2>
+            <p>
+              If the harness defines how an agent acts, memory defines what it can carry
+              forward. The keynote and the Mi-Memory report both insist that memory
+              should not be treated as a passive retrieval layer. It should become a
+              lifecycle artifact that preserves continuity, evidence, and governance.
+            </p>
+            <p>
+              The Mi-Memory framework is especially useful here. It reframes memory as a
+              four-role lifecycle: <strong>Structure</strong>,
+              <strong>Expansion</strong>, <strong>Evolution</strong>, and
+              <strong>Deployment</strong>. That is a major conceptual upgrade from
+              “store more facts” to “preserve a traceable memory contract across
+              modalities, devices, and change operations.”
+            </p>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="timeline-badge">Structure</span>
+                <p>Stable long-term user state and layered memory records</p>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-badge">Expansion</span>
+                <p>MemSense and MemFuse bring visual, sensor, and cross-device evidence into memory</p>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-badge">Evolution</span>
+                <p>D2AICI and E2MEND turn diagnosis into gated, reversible strategy changes</p>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-badge">Deployment</span>
+                <p>LiteMem checks whether the same memory contract can survive edge and repo-native deployment</p>
+              </div>
+            </div>
+
+            <p>
+              This framing turns memory from a cache into a contract. It makes provenance
+              visible, forces updates to be explainable, and gives cross-device fusion a
+              governance model instead of a purely statistical one. In that sense,
+              memory is not a support module. It is one of the core mechanisms through
+              which an agent becomes personal, persistent, and improvable.
+            </p>
+
+            <div class="two-col">
+              <div class="note-card">
+                <h3>Key memory ideas from the materials</h3>
+                <ul>
+                  <li>Memory should preserve source identity and provenance.</li>
+                  <li>Evidence should be typed, not flattened into opaque text.</li>
+                  <li>Updates should be diagnosed and gated, not silently applied.</li>
+                  <li>Cross-device memory needs fusion, not simple duplication.</li>
+                </ul>
+              </div>
+              <div class="note-card accent">
+                <h3>Representative outcomes</h3>
+                <ul>
+                  <li>MemStack shows strong controlled results on memory benchmarks.</li>
+                  <li>MemEvolveX improves memory strategy through explicit iterations.</li>
+                  <li>MemFuse connects atomic events, session context, and stable history.</li>
+                  <li>Mi-Memory argues for evidence-governed continuity, not just recall.</li>
+                </ul>
+              </div>
+            </div>
+</section>
+
+          <section id="world-model" class="content-section">
+            <p class="section-label">04 · World Model</p>
+            <h2>Prediction becomes useful only when it changes decisions</h2>
+            <p>
+              A world model becomes useful only when it changes decisions. In Darwin
+              Agent, prediction is not an isolated modeling problem; it is a component
+              inside the harness that supports planning, exploration, reflection, risk
+              guarding, and evaluation.
+            </p>
+            <p>
+              The key design principle is pragmatic rather than dogmatic: choose the
+              lightest predictive form that actually addresses the failure mode you care
+              about. Some tasks need semantic prediction, others need visual affordance
+              modeling, executable simulators, or hybrid systems. The right world model
+              is therefore task-shaped, not universal.
+            </p>
+
+            <div class="pill-grid">
+              <span class="pill">Plan</span>
+              <span class="pill">Explore</span>
+              <span class="pill">Reflect</span>
+              <span class="pill">Guard</span>
+              <span class="pill">Evaluate</span>
+            </div>
+
+            <p>
+              The point is not to predict every possible future, but to expose the future
+              difference that matters. A useful world model can take different forms
+              depending on the task: semantic prediction for reasoning-heavy workflows,
+              visual affordance prediction for UI-centric tasks, code-based simulators
+              for executable environments, or hybrid systems when the environment is
+              heterogeneous. The test is simple: does the prediction layer make the
+              next action better, safer, or more economical?
+            </p>
+</section>
+
+          <section id="multi-agent" class="content-section">
+            <p class="section-label">05 · Multi-Agent</p>
+            <h2>Collective intelligence is a topology problem</h2>
+            <p>
+              The multi-agent part of the deck makes a point that is easy to miss:
+              adding more agents does not automatically produce collective intelligence.
+              If interaction geometry degenerates into hub-and-spoke broadcasting, a
+              large social system can still behave like a set of parallel monologues.
+            </p>
+            <p>
+              The takeaway is not “more agents.” It is “better hyperedges.” High-quality
+              collaboration requires the right higher-order structure: overlap, balanced
+              participation, and enough triadic closure for information to move beyond a
+              single dominant hub. In other words, topology is not an implementation
+              detail; it is the coordination medium.
+            </p>
+
+            <div class="stats-strip">
+              <div class="stat-card">
+                <strong>96.9%</strong>
+                <span>higher-order interactions in the Moltbook study</span>
+              </div>
+              <div class="stat-card">
+                <strong>0.117</strong>
+                <span>edge overlap: a warning sign of topology collapse</span>
+              </div>
+              <div class="stat-card">
+                <strong>0.863</strong>
+                <span>degree Gini: strong hub dominance</span>
+              </div>
+            </div>
+
+            <p>
+              The design implication is elegant and practical: do not build a single
+              central agent that sees everything. Build compact, high-quality groups
+              with local validation and controlled diffusion. That logic also extends to
+              cross-user collaboration, where topology becomes a product design choice
+              rather than a purely algorithmic detail.
+            </p>
+</section>
+
+          <section id="closing" class="content-section">
+            <p class="section-label">06 · Closing loop</p>
+            <h2>Run → Observe → Recall → Plan → Interact → Validate → Evolve</h2>
+            <p>
+              The closing vision in the deck is a single closed loop. Harness makes
+              behavior composable. Memory preserves the useful past. World models
+              anticipate the near future. Multi-agent topology determines whether
+              collaboration can scale without degenerating. Together they define a
+              self-evolving loop in which each run becomes data for the next improvement.
+            </p>
+            <p>
+              The companion Mi-Memory work reinforces this message from a different
+              angle: evolution must be evidence-governed. If the system cannot explain
+              what changed, why it changed, and how to roll it back, then “learning”
+              becomes indistinguishable from accidental drift.
+            </p>
+
+            <div class="closing-quote">
+              <p>
+                A self-evolving agent is not a bigger prompt. It is a living system that
+                can be observed, debugged, remembered, predicted, and improved.
+              </p>
+            </div>
+</section>
+
+          <section id="references" class="content-section">
+            <p class="section-label">07 · Selected references</p>
+            <h2>Source materials and further reading</h2>
+            <p>
+              This blog was synthesized from the <strong>DA.pptx</strong> keynote and the
+              companion memory notes, with the language polished into a single English
+              article. The items below are the most directly relevant anchors for the
+              ideas discussed above.
+            </p>
+
+            <div class="ref-grid">
+              <a class="ref-card" href="https://huggingface.co/papers/2606.14249" target="_blank" rel="noreferrer">
+                <span class="ref-type">Paper / project</span>
+                <h3>HarnessX</h3>
+                <p>A harness that compiles itself: a first-class, serializable behavior stack for agents.</p>
+              </a>
+              <a class="ref-card" href="https://darwin-agent.github.io/Mi-Memory/" target="_blank" rel="noreferrer">
+                <span class="ref-type">Paper / project</span>
+                <h3>Mi-Memory</h3>
+                <p>A lifecycle memory framework for personal AI, centered on structure, expansion, evolution, and deployment.</p>
+              </a>
+              <div class="ref-card">
+                <span class="ref-type">Research direction</span>
+                <h3>MemEvolveX</h3>
+                <p>Memory as a strategy artifact: configurable, diagnosable, gateable, and continuously improvable.</p>
+              </div>
+              <div class="ref-card">
+                <span class="ref-type">Research direction</span>
+                <h3>MemFuse</h3>
+                <p>Cross-device, cross-user, cross-modal fused memory with provenance-aware evidence flow.</p>
+              </div>
+              <div class="ref-card">
+                <span class="ref-type">Research direction</span>
+                <h3>D²AICI / E2MEND</h3>
+                <p>Diagnostic-driven co-improvement loops for evidence-based memory evolution.</p>
+              </div>
+              <div class="ref-card">
+                <span class="ref-type">Research direction</span>
+                <h3>World Model &amp; Multi-Agent studies</h3>
+                <p>Predictive components, hypergraph topology, and the conditions under which collective intelligence actually emerges.</p>
+              </div>
+            </div>
+</section>
+        </article>
+
+        <aside class="sidebar">
+          <div class="sidebar-card sticky">
+            <p class="section-label">At a glance</p>
+            <h3>What this blog emphasizes</h3>
+            <ul class="sidebar-list">
+              <li>Agent behavior should be a configurable artifact.</li>
+              <li>Memory should preserve provenance and support governed evolution.</li>
+              <li>Prediction should inform action, not sit beside it.</li>
+              <li>Topology matters as much as local agent quality.</li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <p class="section-label">Source notes</p>
+            <ul class="sidebar-list compact">
+              <li>DA.pptx keynote on Darwin Agent</li>
+              <li>Mi-Memory: A Lifecycle Memory Framework for Personal AI</li>
+              <li>Memory benchmark notes and cross-device fusion materials</li>
+              <li>World-model and multi-agent topology studies</li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card subtle">
+            <p class="section-label">Project output</p>
+            <p>
+              A clean static blog page can be published directly or extended into a
+              larger site later. The current project keeps the content readable and the
+              structure easy to evolve.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>Darwin Agent · Synthesized from keynote slides and memory research notes.</p>
+      <p>Theme: <strong>the roadmap to self-evolving agent systems</strong></p>
+    </footer>
+  </body>
+</html>

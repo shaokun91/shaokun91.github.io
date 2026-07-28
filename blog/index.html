@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog · Darwin Agent</title>
+    <meta
+      name="description"
+      content="Blog index for Darwin Agent and related technical essays."
+    />
+    <style>
+      :root {
+        --bg: #07101d;
+        --panel: rgba(13, 22, 38, 0.9);
+        --panel-2: rgba(17, 28, 48, 0.96);
+        --text: #e5eefb;
+        --muted: rgba(229, 238, 251, 0.72);
+        --line: rgba(148, 163, 184, 0.18);
+        --blue: #7cc5ff;
+        --green: #70e0bf;
+        --gold: #ffcf7b;
+        --shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+          "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(124, 197, 255, 0.18), transparent 30%),
+          radial-gradient(circle at bottom right, rgba(112, 224, 191, 0.14), transparent 28%),
+          linear-gradient(180deg, #050b16 0%, var(--bg) 100%);
+        color: var(--text);
+      }
+      a { color: inherit; text-decoration: none; }
+      .wrap {
+        width: min(1080px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 36px 0 56px;
+      }
+      .hero, .card, .nav, .footer {
+        border: 1px solid var(--line);
+        background: linear-gradient(180deg, var(--panel), rgba(8, 15, 28, 0.92));
+        box-shadow: var(--shadow);
+        border-radius: 24px;
+      }
+      .hero {
+        padding: 34px;
+      }
+      .eyebrow {
+        margin: 0 0 10px;
+        color: var(--green);
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-size: 0.78rem;
+        font-weight: 700;
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(2.2rem, 5vw, 4.4rem);
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+      }
+      .lede {
+        margin: 0;
+        max-width: 68ch;
+        color: var(--muted);
+        font-size: 1.04rem;
+        line-height: 1.75;
+      }
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 22px;
+      }
+      .pill {
+        padding: 9px 13px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: var(--text);
+        font-size: 0.92rem;
+        font-weight: 600;
+      }
+      .section-title {
+        margin: 28px 0 14px;
+        color: var(--muted);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        font-weight: 700;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1.35fr 0.65fr;
+        gap: 18px;
+      }
+      .card {
+        padding: 24px;
+      }
+      .card h2 {
+        margin: 0 0 10px;
+        font-size: 1.6rem;
+      }
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.72;
+      }
+      .card .tag {
+        display: inline-flex;
+        margin-bottom: 12px;
+        color: var(--gold);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-size: 0.72rem;
+        font-weight: 700;
+      }
+      .card .actions {
+        margin-top: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 11px 16px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, #7cc5ff, #70e0bf);
+        color: #06101b;
+        font-weight: 800;
+      }
+      .button.secondary {
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .list {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
+      }
+      .list li { margin: 10px 0; }
+      .footer {
+        margin-top: 18px;
+        padding: 20px 24px;
+        color: var(--muted);
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      @media (max-width: 860px) {
+        .grid { grid-template-columns: 1fr; }
+        .hero, .card, .footer { padding-left: 20px; padding-right: 20px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <p class="eyebrow">Blog Directory</p>
+        <h1>Darwin Agent</h1>
+        <p class="lede">
+          A polished technical blog series on self-evolving agent systems. The
+          featured article synthesizes the <strong>DA.pptx</strong> keynote and the
+          companion memory materials into a long-form English essay on harness,
+          memory, world models, and multi-agent topology.
+        </p>
+        <div class="meta">
+          <span class="pill">English technical writing</span>
+          <span class="pill">GitHub Pages</span>
+          <span class="pill">Harness · Memory · World Model · Multi-Agent</span>
+        </div>
+      </section>
+
+      <p class="section-title">Featured post</p>
+      <div class="grid">
+        <article class="card">
+          <span class="tag">Latest article</span>
+          <h2>Darwin Agent: The Roadmap to Self-Evolving Agent Systems</h2>
+          <p>
+            This article argues that self-evolving agents should be engineered as
+            systems, not prompted as one-off models. It walks through the harness as a
+            first-class object, memory as a lifecycle contract, world models as
+            decision-support components, and multi-agent interaction as a topology
+            problem.
+          </p>
+          <div class="actions">
+            <a class="button" href="./darwin-agent/">Read the blog</a>
+            <a class="button secondary" href="../">Back to homepage</a>
+          </div>
+        </article>
+        <aside class="card">
+          <span class="tag">In this series</span>
+          <ul class="list">
+            <li>Why agent performance is a system property</li>
+            <li>How to make behavior configurable and evolvable</li>
+            <li>How memory becomes governance, not just storage</li>
+            <li>How prediction changes action</li>
+            <li>Why topology determines collective intelligence</li>
+          </ul>
+        </aside>
+      </div>
+
+      <div class="footer">
+        <span>Darwin Agent · Shaokun91 personal homepage</span>
+        <span>Built for GitHub Pages</span>
+      </div>
+    </main>
+  </body>
+</html>
