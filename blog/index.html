@@ -10,16 +10,16 @@
     />
     <style>
       :root {
-        --bg: #07101d;
-        --panel: rgba(13, 22, 38, 0.9);
-        --panel-2: rgba(17, 28, 48, 0.96);
-        --text: #e5eefb;
-        --muted: rgba(229, 238, 251, 0.72);
-        --line: rgba(148, 163, 184, 0.18);
-        --blue: #7cc5ff;
-        --green: #70e0bf;
-        --gold: #ffcf7b;
-        --shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+        --bg: #f7f5f0;
+        --surface: #ffffff;
+        --surface-soft: #fbfbf8;
+        --text: #17212f;
+        --muted: #637083;
+        --line: #e5e8ef;
+        --line-strong: #cfd6e0;
+        --accent: #214ce5;
+        --accent-2: #146c5b;
+        --shadow: 0 20px 48px rgba(15, 23, 42, 0.06);
       }
       * { box-sizing: border-box; }
       body {
@@ -28,46 +28,49 @@
         font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
           "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
         background:
-          radial-gradient(circle at top left, rgba(124, 197, 255, 0.18), transparent 30%),
-          radial-gradient(circle at bottom right, rgba(112, 224, 191, 0.14), transparent 28%),
-          linear-gradient(180deg, #050b16 0%, var(--bg) 100%);
+          radial-gradient(circle at top left, rgba(33, 76, 229, 0.035), transparent 24%),
+          radial-gradient(circle at bottom right, rgba(20, 108, 91, 0.03), transparent 22%),
+          var(--bg);
         color: var(--text);
+        line-height: 1.75;
       }
       a { color: inherit; text-decoration: none; }
       .wrap {
-        width: min(1080px, calc(100% - 32px));
+        width: min(1100px, calc(100% - 32px));
         margin: 0 auto;
-        padding: 36px 0 56px;
+        padding: 34px 0 56px;
       }
-      .hero, .card, .nav, .footer {
+      .hero,
+      .card,
+      .footer {
+        background: var(--surface);
         border: 1px solid var(--line);
-        background: linear-gradient(180deg, var(--panel), rgba(8, 15, 28, 0.92));
-        box-shadow: var(--shadow);
         border-radius: 24px;
+        box-shadow: var(--shadow);
       }
       .hero {
-        padding: 34px;
+        padding: 32px;
       }
       .eyebrow {
         margin: 0 0 10px;
-        color: var(--green);
+        color: var(--accent);
         text-transform: uppercase;
         letter-spacing: 0.18em;
         font-size: 0.78rem;
-        font-weight: 700;
+        font-weight: 800;
       }
       h1 {
         margin: 0 0 12px;
-        font-size: clamp(2.2rem, 5vw, 4.4rem);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2.2rem, 5vw, 4.2rem);
         line-height: 1.05;
         letter-spacing: -0.04em;
       }
       .lede {
         margin: 0;
-        max-width: 68ch;
+        max-width: 72ch;
         color: var(--muted);
-        font-size: 1.04rem;
-        line-height: 1.75;
+        font-size: 1.03rem;
       }
       .meta {
         display: flex;
@@ -78,8 +81,8 @@
       .pill {
         padding: 9px 13px;
         border-radius: 999px;
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: var(--surface-soft);
+        border: 1px solid var(--line);
         color: var(--text);
         font-size: 0.92rem;
         font-weight: 600;
@@ -90,7 +93,7 @@
         letter-spacing: 0.15em;
         text-transform: uppercase;
         font-size: 0.8rem;
-        font-weight: 700;
+        font-weight: 800;
       }
       .grid {
         display: grid;
@@ -102,23 +105,24 @@
       }
       .card h2 {
         margin: 0 0 10px;
-        font-size: 1.6rem;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1.62rem;
+        line-height: 1.15;
       }
       .card p {
         margin: 0;
         color: var(--muted);
-        line-height: 1.72;
       }
       .card .tag {
         display: inline-flex;
         margin-bottom: 12px;
-        color: var(--gold);
+        color: var(--accent-2);
         letter-spacing: 0.12em;
         text-transform: uppercase;
         font-size: 0.72rem;
-        font-weight: 700;
+        font-weight: 800;
       }
-      .card .actions {
+      .actions {
         margin-top: 18px;
         display: flex;
         flex-wrap: wrap;
@@ -130,14 +134,14 @@
         justify-content: center;
         padding: 11px 16px;
         border-radius: 999px;
-        background: linear-gradient(135deg, #7cc5ff, #70e0bf);
-        color: #06101b;
+        background: linear-gradient(135deg, var(--accent), #6f8cff);
+        color: white;
         font-weight: 800;
       }
       .button.secondary {
-        background: rgba(255, 255, 255, 0.05);
+        background: var(--surface-soft);
         color: var(--text);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        border: 1px solid var(--line);
       }
       .list {
         margin: 0;
@@ -156,7 +160,9 @@
       }
       @media (max-width: 860px) {
         .grid { grid-template-columns: 1fr; }
-        .hero, .card, .footer { padding-left: 20px; padding-right: 20px; }
+        .hero,
+        .card,
+        .footer { padding-left: 20px; padding-right: 20px; }
       }
     </style>
   </head>
@@ -166,10 +172,10 @@
         <p class="eyebrow">Blog Directory</p>
         <h1>Darwin Agent</h1>
         <p class="lede">
-          A polished technical blog series on self-evolving agent systems. The
-          featured article synthesizes the <strong>DA.pptx</strong> keynote and the
-          companion memory materials into a publication-style English essay on
-          harness, memory, world models, and multi-agent topology.
+          A polished technical blog series on self-evolving agent systems. The featured
+          article synthesizes the <strong>DA.pptx</strong> keynote and the companion memory
+          materials into a publication-style English essay on harness, memory, world models,
+          and multi-agent topology.
         </p>
         <div class="meta">
           <span class="pill">English technical writing</span>
@@ -182,13 +188,13 @@
       <div class="grid">
         <article class="card">
           <span class="tag">Latest article</span>
-          <h2>Darwin Agent: The Roadmap to Self-Evolving Agent Systems</h2>
+          <h2>Darwin Agent: The What and When of Self-Evolving Agents</h2>
           <p>
-            This article argues that self-evolving agents should be engineered as
-            systems, not prompted as one-off models. It walks through the harness as
-            a first-class object, memory as a lifecycle contract, world models as
-            decision-support components, and multi-agent interaction as a topology
-            problem — in a more formal, publication-style layout.
+            This article argues that self-evolving agents should be engineered as systems,
+            not prompted as one-off models. It walks through the harness as a first-class
+            object, memory as a lifecycle contract, world models as decision-support
+            components, and multi-agent interaction as a topology problem — in a more
+            formal, publication-style layout.
           </p>
           <div class="actions">
             <a class="button" href="./2026/self-evolving-agents/">Read the blog</a>

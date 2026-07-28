@@ -5,65 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Darwin Agent: a polished long-form technical blog on self-evolving agent systems, synthesized from DA.pptx and the Mi-Memory report."
+      content="A formal technical essay on self-evolving agent systems, synthesizing DA.pptx and the companion memory materials into a publication-style blog post."
     />
-    <title>Darwin Agent: The Roadmap to Self-Evolving Agent Systems</title>
+    <title>Darwin Agent: The What and When of Self-Evolving Agents</title>
     <style>
       :root {
-        --bg: #f7f8fb;
+        --bg: #f7f5f0;
         --surface: #ffffff;
-        --surface-soft: #fbfcfe;
-        --surface-muted: #f1f4f8;
-        --text: #152033;
-        --muted: #5f6b7a;
-        --line: #dbe2ea;
-        --line-strong: #c9d3de;
-        --blue: #245bff;
-        --blue-soft: rgba(36, 91, 255, 0.08);
-        --green: #0d9967;
-        --green-soft: rgba(13, 153, 103, 0.08);
-        --gold: #8b6508;
-        --gold-soft: rgba(255, 199, 87, 0.16);
-        --purple: #6e42d8;
-        --purple-soft: rgba(110, 66, 216, 0.08);
-        --shadow: 0 16px 44px rgba(15, 23, 42, 0.08);
+        --surface-soft: #fbfbf8;
+        --text: #17212f;
+        --muted: #637083;
+        --line: #e5e8ef;
+        --line-strong: #cfd6e0;
+        --accent: #214ce5;
+        --accent-soft: rgba(33, 76, 229, 0.08);
+        --accent-2: #146c5b;
+        --accent-2-soft: rgba(20, 108, 91, 0.08);
+        --shadow: 0 20px 48px rgba(15, 23, 42, 0.06);
         --radius: 18px;
-        --max: 1260px;
+        --max: 1280px;
       }
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
       body {
         margin: 0;
-        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
-          "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
         color: var(--text);
         background:
-          radial-gradient(circle at top right, rgba(36, 91, 255, 0.05), transparent 24%),
-          radial-gradient(circle at top left, rgba(13, 153, 103, 0.04), transparent 22%),
+          radial-gradient(circle at top left, rgba(33, 76, 229, 0.035), transparent 24%),
+          radial-gradient(circle at top right, rgba(20, 108, 91, 0.03), transparent 22%),
           var(--bg);
-        line-height: 1.72;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+          "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+        line-height: 1.75;
       }
       a { color: inherit; text-decoration: none; }
       img { max-width: 100%; display: block; }
+      strong { font-weight: 700; }
 
       .progress {
         position: fixed;
         inset: 0 0 auto 0;
         height: 3px;
-        z-index: 80;
-        background: rgba(0, 0, 0, 0.04);
+        z-index: 90;
+        background: rgba(17, 24, 39, 0.05);
       }
-      .progress > span {
+      .progress span {
         display: block;
-        width: 0%;
+        width: 0;
         height: 100%;
-        background: linear-gradient(90deg, var(--blue), #63a0ff, var(--green));
+        background: linear-gradient(90deg, var(--accent), #69a0ff, var(--accent-2));
       }
 
       .shell {
         width: min(var(--max), calc(100% - 36px));
         margin: 0 auto;
-        padding: 24px 0 56px;
+        padding: 28px 0 56px;
       }
 
       .topbar {
@@ -71,7 +67,7 @@
         align-items: center;
         justify-content: space-between;
         gap: 16px;
-        padding: 14px 0 20px;
+        padding: 12px 0 20px;
       }
       .brand {
         display: flex;
@@ -84,10 +80,10 @@
         border-radius: 12px;
         display: grid;
         place-items: center;
-        font-weight: 800;
         color: white;
-        background: linear-gradient(135deg, var(--blue), var(--purple));
-        box-shadow: 0 10px 26px rgba(36, 91, 255, 0.22);
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--accent), #6f8cff);
+        box-shadow: 0 10px 24px rgba(33, 76, 229, 0.2);
       }
       .brand-text strong {
         display: block;
@@ -108,60 +104,63 @@
       .toplinks a {
         padding: 8px 12px;
         border-radius: 999px;
+        border: 1px solid transparent;
         color: var(--muted);
-        font-size: 0.92rem;
         background: rgba(255, 255, 255, 0.55);
-        border: 1px solid rgba(219, 226, 234, 0.72);
         transition: all 160ms ease;
+        font-size: 0.92rem;
       }
       .toplinks a:hover,
       .toplinks a.active {
         color: var(--text);
-        border-color: var(--line-strong);
         background: white;
-        box-shadow: var(--shadow);
+        border-color: var(--line-strong);
+        box-shadow: 0 10px 28px rgba(15, 23, 42, 0.05);
       }
 
       .layout {
         display: grid;
         grid-template-columns: minmax(0, 1fr) 320px;
-        gap: 28px;
+        gap: 26px;
         align-items: start;
       }
 
       .article {
         min-width: 0;
       }
-
-      .hero {
-        padding: 28px 30px 24px;
+      .paper {
         background: var(--surface);
         border: 1px solid var(--line);
         border-radius: 26px;
         box-shadow: var(--shadow);
+        overflow: clip;
+      }
+
+      .hero {
+        padding: 30px 32px 28px;
+        border-bottom: 1px solid var(--line);
       }
       .kicker {
         margin: 0 0 10px;
-        color: var(--blue);
+        color: var(--accent);
         text-transform: uppercase;
         letter-spacing: 0.18em;
-        font-size: 0.76rem;
+        font-size: 0.75rem;
         font-weight: 800;
       }
       h1 {
         margin: 0;
         font-family: Georgia, "Times New Roman", serif;
-        font-size: clamp(2.3rem, 5vw, 4.2rem);
-        line-height: 1.05;
-        letter-spacing: -0.035em;
+        font-size: clamp(2.2rem, 4.8vw, 4rem);
+        line-height: 1.06;
+        letter-spacing: -0.04em;
       }
       .subtitle {
         margin: 14px 0 0;
-        max-width: 72ch;
+        max-width: 74ch;
         color: var(--muted);
-        font-size: 1.04rem;
+        font-size: 1.05rem;
       }
-
       .meta-row {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -178,7 +177,7 @@
         display: block;
         margin-bottom: 4px;
         color: var(--muted);
-        font-size: 0.76rem;
+        font-size: 0.75rem;
         text-transform: uppercase;
         letter-spacing: 0.12em;
         font-weight: 700;
@@ -187,7 +186,6 @@
         display: block;
         font-weight: 650;
       }
-
       .tag-row {
         display: flex;
         flex-wrap: wrap;
@@ -197,52 +195,53 @@
       .tag {
         padding: 8px 11px;
         border-radius: 999px;
-        font-size: 0.88rem;
+        font-size: 0.87rem;
         font-weight: 650;
         border: 1px solid transparent;
+        background: var(--surface-soft);
       }
-      .tag.blue { background: var(--blue-soft); border-color: rgba(36, 91, 255, 0.16); color: #2042aa; }
-      .tag.green { background: var(--green-soft); border-color: rgba(13, 153, 103, 0.16); color: #0d6e4b; }
-      .tag.gold { background: var(--gold-soft); border-color: rgba(139, 101, 8, 0.16); color: #825e06; }
-      .tag.purple { background: var(--purple-soft); border-color: rgba(110, 66, 216, 0.16); color: #5b38b6; }
-
-      .summary,
-      .framework,
-      .section,
-      .note,
-      .callout,
-      .ref-card,
-      .sidebar-card {
-        background: var(--surface);
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        box-shadow: var(--shadow);
+      .tag.blue {
+        background: var(--accent-soft);
+        border-color: rgba(33, 76, 229, 0.14);
+        color: #1d43a5;
+      }
+      .tag.green {
+        background: var(--accent-2-soft);
+        border-color: rgba(20, 108, 91, 0.14);
+        color: #0f5b4d;
+      }
+      .tag.gray {
+        color: var(--muted);
+        border-color: var(--line);
       }
 
       .summary,
       .section,
       .framework {
-        padding: 24px 28px;
-        margin-top: 18px;
+        padding: 28px 32px;
       }
-
+      .summary + .section,
+      .framework + .section,
+      .section + .section {
+        border-top: 1px solid var(--line);
+      }
       .section h2,
       .summary h2,
       .framework h2 {
         margin: 0 0 10px;
         font-family: Georgia, "Times New Roman", serif;
-        font-size: clamp(1.5rem, 2.6vw, 2.05rem);
-        line-height: 1.2;
+        font-size: clamp(1.45rem, 2.6vw, 2rem);
+        line-height: 1.22;
         letter-spacing: -0.02em;
       }
-      .section p,
       .summary p,
+      .section p,
       .framework p {
         margin: 0 0 12px;
         color: #354152;
       }
-      .section p:last-child,
       .summary p:last-child,
+      .section p:last-child,
       .framework p:last-child { margin-bottom: 0; }
 
       .summary-grid {
@@ -270,8 +269,8 @@
       .framework table {
         width: 100%;
         border-collapse: collapse;
-        margin-top: 14px;
-        font-size: 0.97rem;
+        margin-top: 16px;
+        font-size: 0.96rem;
       }
       .framework th,
       .framework td {
@@ -281,38 +280,34 @@
         text-align: left;
       }
       .framework thead th {
-        font-size: 0.77rem;
+        font-size: 0.76rem;
         text-transform: uppercase;
         letter-spacing: 0.12em;
         color: var(--muted);
         background: var(--surface-soft);
       }
       .framework tbody tr:hover td {
-        background: #fcfdff;
+        background: #fcfdfb;
       }
-      .framework .col-dim { width: 17%; font-weight: 750; }
-      .framework .col-what { width: 30%; }
-      .framework .col-when { width: 26%; }
-      .framework .col-why { width: 27%; }
+      .framework .col-dim { width: 18%; font-weight: 750; }
+      .framework .col-what { width: 29%; }
+      .framework .col-when { width: 25%; }
+      .framework .col-why { width: 28%; }
 
       .note {
         margin-top: 16px;
-        padding: 18px 20px;
-        background: linear-gradient(180deg, #ffffff, #fcfdff);
+        padding: 16px 18px;
+        background: linear-gradient(180deg, rgba(33, 76, 229, 0.04), rgba(255, 255, 255, 0.98));
+        border: 1px solid rgba(33, 76, 229, 0.12);
+        border-left: 4px solid var(--accent);
+        border-radius: 14px;
+        color: #283244;
       }
-      .note strong { color: var(--blue); }
-
-      .callout {
-        margin-top: 18px;
-        padding: 18px 20px;
-        background: linear-gradient(180deg, rgba(36, 91, 255, 0.05), rgba(255, 255, 255, 0.98));
-        border-left: 4px solid var(--blue);
-      }
-      .callout p { margin: 0; }
+      .note strong { color: var(--accent); }
 
       .section-header {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         gap: 12px;
         margin-bottom: 12px;
       }
@@ -324,22 +319,43 @@
         place-items: center;
         font-weight: 800;
         color: white;
-        background: linear-gradient(135deg, var(--blue), #6d8bff);
+        background: linear-gradient(135deg, var(--accent), #6f8cff);
+        box-shadow: 0 10px 22px rgba(33, 76, 229, 0.15);
       }
       .section-title {
-        margin: 0;
-        font-size: 0.8rem;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
+        margin: 0 0 3px;
         color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        font-size: 0.78rem;
         font-weight: 800;
+      }
+      .section-lead {
+        margin-top: 14px;
+      }
+      .section-lead p {
+        font-size: 1.01rem;
+      }
+
+      .quote {
+        margin: 18px 0 0;
+        padding: 18px 20px;
+        border-left: 4px solid var(--accent-2);
+        border-radius: 0 14px 14px 0;
+        background: linear-gradient(180deg, rgba(20, 108, 91, 0.04), rgba(255, 255, 255, 0.98));
+      }
+      .quote p {
+        margin: 0;
+        color: #1f2a37;
+        font-style: italic;
+        font-size: 1.03rem;
       }
 
       .two-col {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 16px;
-        margin-top: 14px;
+        margin-top: 16px;
       }
       .card {
         padding: 18px;
@@ -364,12 +380,12 @@
       .timeline {
         display: grid;
         gap: 12px;
-        margin-top: 14px;
+        margin-top: 16px;
       }
       .timeline-item {
         padding: 16px 18px;
         border-radius: 16px;
-        background: #fafcff;
+        background: #fafbfc;
         border: 1px solid var(--line);
       }
       .timeline-item strong {
@@ -377,8 +393,8 @@
         margin-bottom: 6px;
         padding: 4px 10px;
         border-radius: 999px;
-        background: var(--blue-soft);
-        color: #2042aa;
+        background: var(--accent-soft);
+        color: #1d43a5;
         font-size: 0.77rem;
         letter-spacing: 0.08em;
         text-transform: uppercase;
@@ -399,10 +415,9 @@
         border-radius: 999px;
         background: var(--surface-soft);
         border: 1px solid var(--line);
-        font-weight: 650;
         color: var(--text);
+        font-weight: 650;
       }
-
       .stats {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -426,28 +441,23 @@
         font-size: 0.93rem;
       }
 
-      blockquote {
-        margin: 18px 0;
-        padding: 18px 20px;
-        border-left: 4px solid var(--green);
-        background: linear-gradient(180deg, rgba(13, 153, 103, 0.05), rgba(255, 255, 255, 0.98));
-        border-radius: 0 14px 14px 0;
-      }
-      blockquote p {
-        margin: 0;
-        color: #1f2a37;
-        font-size: 1.03rem;
-        font-style: italic;
-      }
-
       .refs {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
-        margin-top: 14px;
+        margin-top: 16px;
       }
       .ref-card {
-        padding: 18px 18px 16px;
+        padding: 18px;
+        border-radius: 16px;
+        border: 1px solid var(--line);
+        background: var(--surface-soft);
+        transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+      }
+      .ref-card:hover {
+        transform: translateY(-1px);
+        border-color: var(--line-strong);
+        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
       }
       .ref-card .label {
         display: inline-flex;
@@ -460,7 +470,7 @@
       }
       .ref-card h3 {
         margin: 0 0 6px;
-        font-size: 1.06rem;
+        font-size: 1.04rem;
       }
       .ref-card p {
         margin: 0;
@@ -475,10 +485,14 @@
       }
       .sidebar-card {
         padding: 18px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        box-shadow: var(--shadow);
       }
       .sidebar-card h3 {
         margin: 0 0 10px;
-        font-size: 1.04rem;
+        font-size: 1.02rem;
       }
       .sidebar-card p {
         margin: 0;
@@ -497,8 +511,8 @@
       .toc a:hover,
       .toc a.active {
         color: var(--text);
-        border-color: var(--line);
         background: var(--surface-soft);
+        border-color: var(--line);
       }
       .sidebar-list {
         margin: 0;
@@ -508,16 +522,15 @@
       .sidebar-list li { margin: 8px 0; }
 
       .footer {
-        margin-top: 24px;
+        margin-top: 18px;
         padding: 16px 4px 0;
         display: flex;
         justify-content: space-between;
-        gap: 14px;
+        gap: 12px;
         flex-wrap: wrap;
         color: var(--muted);
         font-size: 0.92rem;
       }
-
       .muted-note {
         margin-top: 12px;
         color: var(--muted);
@@ -541,8 +554,7 @@
         .hero,
         .summary,
         .framework,
-        .section,
-        .sidebar-card {
+        .section {
           padding-left: 18px;
           padding-right: 18px;
         }
@@ -570,429 +582,469 @@
 
       <div class="layout">
         <article class="article">
-          <header class="hero">
-            <p class="kicker">Blog / 2026 / Self-Evolving Agents</p>
-            <h1>Darwin Agent: The Roadmap to Self-Evolving Agent Systems</h1>
-            <p class="subtitle">
-              A systems-oriented synthesis of the <strong>DA.pptx</strong> keynote
-              and the companion memory materials. The central claim is simple:
-              durable agent capability comes from the interplay of harness,
-              memory, prediction, and multi-agent topology — not from a larger
-              model alone.
-            </p>
-
-            <div class="meta-row">
-              <div class="meta">
-                <span class="meta-label">Author</span>
-                <span class="meta-value">Kun Shao · Darwin Agent Team</span>
-              </div>
-              <div class="meta">
-                <span class="meta-label">Date</span>
-                <span class="meta-value">2026-07-28</span>
-              </div>
-              <div class="meta">
-                <span class="meta-label">Format</span>
-                <span class="meta-value">Long-form technical blog</span>
-              </div>
-            </div>
-
-            <div class="tag-row" aria-label="Key themes">
-              <span class="tag blue">Harness</span>
-              <span class="tag green">Memory</span>
-              <span class="tag gold">World Model</span>
-              <span class="tag purple">Multi-Agent</span>
-            </div>
-          </header>
-
-          <section class="summary">
-            <h2>Abstract</h2>
-            <p>
-              The keynote and the memory report converge on one thesis: a truly
-              self-evolving agent must be built as a <em>system</em>. The system
-              needs a behavior layer that can be inspected and changed, a memory
-              layer that preserves continuity and provenance, a predictive layer
-              that informs decisions, and a coordination layer that avoids
-              topology collapse. The result is not just a better model; it is a
-              design for controlled evolution.
-            </p>
-            <div class="summary-grid">
-              <div class="mini">
-                <strong>Behavior</strong>
-                <span>Harness becomes a first-class, replaceable object.</span>
-              </div>
-              <div class="mini">
-                <strong>Continuity</strong>
-                <span>Memory becomes a lifecycle contract, not a passive cache.</span>
-              </div>
-              <div class="mini">
-                <strong>Coordination</strong>
-                <span>Topology determines whether agents can reason collectively.</span>
-              </div>
-            </div>
-          </section>
-
-          <section class="framework">
-            <h2>A compact framework for self-evolving agents</h2>
-            <p>
-              The following table reframes the source materials into a practical
-              editorial structure: what changes, when the change should persist,
-              and why the system should care.
-            </p>
-            <table aria-label="Framework table">
-              <thead>
-                <tr>
-                  <th class="col-dim">Dimension</th>
-                  <th class="col-what">What changes</th>
-                  <th class="col-when">When it should persist</th>
-                  <th class="col-why">Why it matters</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="col-dim"><strong>Harness</strong></td>
-                  <td class="col-what">Tooling, routing, memory hooks, sandboxing, and trace policy.</td>
-                  <td class="col-when">Across tasks and iterations, when behavior improvements are reusable.</td>
-                  <td class="col-why">Makes agent behavior inspectable, comparable, and evolvable.</td>
-                </tr>
-                <tr>
-                  <td class="col-dim"><strong>Memory</strong></td>
-                  <td class="col-what">Evidence, summaries, user state, and strategy artifacts.</td>
-                  <td class="col-when">Across sessions and devices, when continuity and provenance matter.</td>
-                  <td class="col-why">Turns recall into governance and supports cross-device continuity.</td>
-                </tr>
-                <tr>
-                  <td class="col-dim"><strong>World Model</strong></td>
-                  <td class="col-what">Predicted futures, risk estimates, and decision-support signals.</td>
-                  <td class="col-when">Before action, when prediction should alter the next step.</td>
-                  <td class="col-why">Prevents the system from treating prediction as a decorative add-on.</td>
-                </tr>
-                <tr>
-                  <td class="col-dim"><strong>Multi-Agent</strong></td>
-                  <td class="col-what">Interaction geometry, group composition, and coordination topology.</td>
-                  <td class="col-when">Across group work, when local capability must aggregate into collective intelligence.</td>
-                  <td class="col-why">Shows that coordination quality is a structural problem, not only an agent-quality problem.</td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="note">
-              <strong>Editorial note:</strong> This framework is deliberately
-              compact. It is meant to serve as a reading lens for the rest of the
-              article, not as a final taxonomy of all agent systems.
-            </div>
-          </section>
-
-          <section id="thesis" class="section">
-            <div class="section-header">
-              <div class="section-index">01</div>
-              <div>
-                <p class="section-title">Thesis</p>
-                <h2>From bigger models to self-evolving systems</h2>
-              </div>
-            </div>
-            <p>
-              The opening move in Darwin Agent is conceptual rather than technical.
-              Instead of asking how to make a model larger, the deck asks how to make
-              an agent system capable of <strong>self-improvement</strong>. That
-              shift matters because once an agent becomes a system, progress is no
-              longer measured only by benchmark scores. It is also measured by the
-              quality of the control loop that surrounds the model.
-            </p>
-            <p>
-              In practice, this means the agent is no longer a prompt wrapped around a
-              language model. It is a structured runtime composed of tools, traces,
-              memory, evaluation, safety gates, and control policies. The performance
-              variable therefore moves upward: from model weights to system structure,
-              experience accumulation, and interaction topology.
-            </p>
-            <blockquote>
-              <p>
-                Self-evolving agents are engineered as systems, not prompted as one-off models.
+          <div class="paper">
+            <header class="hero">
+              <p class="kicker">Blog / 2026 / Self-Evolving Agents</p>
+              <h1>Darwin Agent: The What and When of Self-Evolving Agents</h1>
+              <p class="subtitle">
+                A formal English synthesis of <strong>DA.pptx</strong> and the companion
+                memory materials. The central argument is that a self-evolving agent is not
+                a larger prompt, but a system with inspectable behavior, governed memory,
+                predictive grounding, and a topology that can support collective reasoning.
               </p>
-            </blockquote>
-          </section>
 
-          <section id="harness" class="section">
-            <div class="section-header">
-              <div class="section-index">02</div>
-              <div>
-                <p class="section-title">Harness</p>
-                <h2>Harness as a first-class object</h2>
+              <div class="meta-row">
+                <div class="meta">
+                  <span class="meta-label">Author</span>
+                  <span class="meta-value">Kun Shao · Darwin Agent Team</span>
+                </div>
+                <div class="meta">
+                  <span class="meta-label">Date</span>
+                  <span class="meta-value">2026-07-28</span>
+                </div>
+                <div class="meta">
+                  <span class="meta-label">Format</span>
+                  <span class="meta-value">Long-form technical blog</span>
+                </div>
               </div>
-            </div>
-            <p>
-              The harness section is the architectural heart of the deck. Its
-              message is that the behavior layer itself should be made explicit,
-              replaceable, and measurable. That makes the control stack searchable in
-              the same way that models are searchable today.
-            </p>
-            <p>
-              HarnessX formalizes this idea by separating the model from the behavior
-              configuration. Once that split exists, a single model can be executed
-              under different harnesses, and the same harness can be evaluated across
-              multiple models. The consequence is practical: agent behavior becomes a
-              configurable artifact, not a hidden implementation detail.
-            </p>
 
-            <div class="callout">
+              <div class="tag-row" aria-label="Key themes">
+                <span class="tag blue">Harness</span>
+                <span class="tag green">Memory</span>
+                <span class="tag blue">World Model</span>
+                <span class="tag green">Multi-Agent</span>
+                <span class="tag gray">Control · Continuity · Prediction · Topology</span>
+              </div>
+            </header>
+
+            <section class="summary">
+              <h2>Abstract</h2>
               <p>
-                <strong>Core intuition:</strong> if model capability is the “what,”
-                the harness is the “how.” Self-improvement becomes tractable only when
-                the “how” can be serialized, compared, searched, and verified.
+                The source materials describe a transition in how agent systems should be
+                engineered. Instead of optimizing an isolated model, they argue for a
+                controlled system whose behavior can be configured, whose memory can be
+                governed, whose predictions can guide the next action, and whose collective
+                structure can avoid coordination collapse.
               </p>
-            </div>
-
-            <div class="two-col">
-              <div class="card">
-                <h3>What HarnessX emphasizes</h3>
-                <ul>
-                  <li>Serializable and comparable behavior configuration.</li>
-                  <li>Composable pipelines for tools, memory, sandboxing, and traces.</li>
-                  <li>Benchmarks that evaluate the harness, not just the base model.</li>
-                  <li>A training bridge from trajectories to SFT and RL records.</li>
-                </ul>
-              </div>
-              <div class="card accent">
-                <h3>Why it matters</h3>
-                <ul>
-                  <li>Behavior improvements can be reused across tasks.</li>
-                  <li>Failures become analyzable at the system level.</li>
-                  <li>Evolution can be searched, ranked, and verified.</li>
-                  <li>Open-source harnesses become an ecosystem, not just a wrapper.</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section id="memory" class="section">
-            <div class="section-header">
-              <div class="section-index">03</div>
-              <div>
-                <p class="section-title">Memory</p>
-                <h2>Memory as continuity with governance</h2>
-              </div>
-            </div>
-            <p>
-              If the harness determines how an agent acts, memory determines what the
-              system can safely carry forward. The Mi-Memory report sharpens this
-              point by treating memory as a lifecycle contract rather than a cache.
-              Its four roles — Structure, Expansion, Evolution, and Deployment —
-              describe how memory should behave across time, modality, and device.
-            </p>
-            <p>
-              This framing is more precise than “store more facts.” It insists that
-              memory preserve source identity, provenance, and change history. That
-              makes memory a governance layer: not just a place where information
-              lives, but a place where the system can explain what was remembered,
-              why it was remembered, and how it was allowed to change.
-            </p>
-
-            <div class="timeline">
-              <div class="timeline-item">
-                <strong>Structure</strong>
-                <p>Stable long-term user state and layered memory records.</p>
-              </div>
-              <div class="timeline-item">
-                <strong>Expansion</strong>
-                <p>MemSense and MemFuse bring visual, sensor, and cross-device evidence into memory.</p>
-              </div>
-              <div class="timeline-item">
-                <strong>Evolution</strong>
-                <p>D2AICI and E2MEND turn diagnosis into gated, reversible strategy changes.</p>
-              </div>
-              <div class="timeline-item">
-                <strong>Deployment</strong>
-                <p>LiteMem checks whether the same memory contract can survive edge and repo-native deployment.</p>
-              </div>
-            </div>
-
-            <div class="two-col">
-              <div class="card">
-                <h3>Key memory ideas from the materials</h3>
-                <ul>
-                  <li>Memory should preserve source identity and provenance.</li>
-                  <li>Evidence should be typed, not flattened into opaque text.</li>
-                  <li>Updates should be diagnosed and gated, not silently applied.</li>
-                  <li>Cross-device memory needs fusion, not simple duplication.</li>
-                </ul>
-              </div>
-              <div class="card accent">
-                <h3>Representative outcomes</h3>
-                <ul>
-                  <li>MemStack shows strong controlled results on memory benchmarks.</li>
-                  <li>MemEvolveX improves memory strategy through explicit iterations.</li>
-                  <li>MemFuse connects atomic events, session context, and stable history.</li>
-                  <li>Mi-Memory argues for evidence-governed continuity, not just recall.</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section id="world-model" class="section">
-            <div class="section-header">
-              <div class="section-index">04</div>
-              <div>
-                <p class="section-title">World Model</p>
-                <h2>Prediction only matters when it changes decisions</h2>
-              </div>
-            </div>
-            <p>
-              The world-model section shifts the lens from the past to the near
-              future. Here, prediction is not treated as a stand-alone research
-              problem. It is a decision-support component inside the harness — one
-              that can help planning, exploration, reflection, risk guarding, and
-              evaluation.
-            </p>
-            <p>
-              The important design choice is pragmatic: use the lightest predictive
-              mechanism that actually solves the failure mode. Some tasks need
-              semantic prediction; others need visual affordance modeling, executable
-              simulators, or hybrid systems. The right world model is not universal;
-              it is task-shaped.
-            </p>
-
-            <div class="pill-row" aria-label="Decision loop">
-              <span class="pill">Plan</span>
-              <span class="pill">Explore</span>
-              <span class="pill">Reflect</span>
-              <span class="pill">Guard</span>
-              <span class="pill">Evaluate</span>
-            </div>
-
-            <div class="callout">
               <p>
-                A useful world model does not predict everything. It predicts the
-                difference that matters — the difference that changes the next action.
+                Read this way, self-evolution is not a single algorithmic trick. It is a
+                design discipline: preserve what should persist, revise what should change,
+                and make each layer legible enough to support inspection, diagnosis, and
+                reuse.
               </p>
-            </div>
-          </section>
-
-          <section id="multi-agent" class="section">
-            <div class="section-header">
-              <div class="section-index">05</div>
-              <div>
-                <p class="section-title">Multi-Agent</p>
-                <h2>Collective intelligence is a topology problem</h2>
+              <div class="summary-grid">
+                <div class="mini">
+                  <strong>Behavior</strong>
+                  <span>The harness is the visible control surface for agent execution.</span>
+                </div>
+                <div class="mini">
+                  <strong>Continuity</strong>
+                  <span>Memory is a lifecycle contract with provenance and governance.</span>
+                </div>
+                <div class="mini">
+                  <strong>Coordination</strong>
+                  <span>Topology determines whether multiple agents can think together.</span>
+                </div>
               </div>
-            </div>
-            <p>
-              The multi-agent part of the deck makes a point that is easy to miss:
-              adding more agents does not automatically produce collective intelligence.
-              If the interaction geometry collapses into hub-and-spoke broadcasting,
-              the system can still behave like a set of parallel monologues.
-            </p>
-            <p>
-              The key takeaway is therefore not “more agents.” It is “better
-              hyperedges.” High-quality collaboration requires overlap, balanced
-              participation, and enough triadic closure for information to move
-              beyond a single dominant hub. In other words, topology is the
-              coordination medium.
-            </p>
+            </section>
 
-            <div class="stats">
-              <div class="stat">
-                <strong>96.9%</strong>
-                <span>Higher-order interactions in the Moltbook study</span>
-              </div>
-              <div class="stat">
-                <strong>0.117</strong>
-                <span>Edge overlap — a warning sign of topology collapse</span>
-              </div>
-              <div class="stat">
-                <strong>0.863</strong>
-                <span>Degree Gini — strong hub dominance</span>
-              </div>
-            </div>
-
-            <p class="muted-note">
-              The design implication is practical: do not build a single central agent
-              that sees everything. Build compact, high-quality groups with local
-              validation and controlled diffusion.
-            </p>
-          </section>
-
-          <section id="practice" class="section">
-            <div class="section-header">
-              <div class="section-index">06</div>
-              <div>
-                <p class="section-title">What it means in practice</p>
-                <h2>From roadmap to implementation posture</h2>
-              </div>
-            </div>
-            <p>
-              Read together, the two source materials suggest an implementation
-              posture rather than a single architecture. Build the harness so behavior
-              can be compared. Build memory so evidence and identity persist. Build a
-              world model so prediction informs action. Build multi-agent interaction
-              so coordination does not degenerate as the system scales.
-            </p>
-            <p>
-              The common thread is controlled evolution. A self-evolving agent should
-              not merely “learn more.” It should learn in a way that can be observed,
-              diagnosed, audited, and improved. That requirement is what turns the
-              roadmap from a slogan into an engineering discipline.
-            </p>
-
-            <blockquote>
+            <section class="framework">
+              <h2>A compact framework for reading the deck</h2>
               <p>
-                A self-evolving agent is not a bigger prompt. It is a living system
-                that can be observed, debugged, remembered, predicted, and improved.
+                The table below turns the keynote logic into a practical reading lens: what
+                changes in the system, when that change should survive, and why it matters
+                for the next generation of agent products.
               </p>
-            </blockquote>
-          </section>
+              <table aria-label="Framework table">
+                <thead>
+                  <tr>
+                    <th class="col-dim">Dimension</th>
+                    <th class="col-what">What changes</th>
+                    <th class="col-when">When it should persist</th>
+                    <th class="col-why">Why it matters</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-dim"><strong>Harness</strong></td>
+                    <td class="col-what">Execution policy, tool routing, sandboxing, and trace format.</td>
+                    <td class="col-when">When the behavior pattern is reusable, comparable, and safe to replay.</td>
+                    <td class="col-why">Makes agent behavior a serializable artifact rather than a hidden implementation detail.</td>
+                  </tr>
+                  <tr>
+                    <td class="col-dim"><strong>Memory</strong></td>
+                    <td class="col-what">Identity, provenance, episodic traces, and long-term user state.</td>
+                    <td class="col-when">When the evidence is trusted and relevant enough to survive across sessions and devices.</td>
+                    <td class="col-why">Turns memory into governance for continuity, not just a cache for recall.</td>
+                  </tr>
+                  <tr>
+                    <td class="col-dim"><strong>World Model</strong></td>
+                    <td class="col-what">State transitions, risk forecasts, rollout estimates, and decision support.</td>
+                    <td class="col-when">When prediction should actually change the next action, not merely decorate it.</td>
+                    <td class="col-why">Keeps prediction tied to planning, exploration, reflection, and guardrails.</td>
+                  </tr>
+                  <tr>
+                    <td class="col-dim"><strong>Multi-Agent</strong></td>
+                    <td class="col-what">Roles, interaction geometry, communication rules, and group composition.</td>
+                    <td class="col-when">When local capability must aggregate into collective intelligence.</td>
+                    <td class="col-why">Shows that coordination quality is structural, not only a function of single-agent strength.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="note">
+                <strong>Editorial note:</strong> This framework is intentionally compact. It is
+                meant to structure the reading of the article, not to claim a final taxonomy
+                of all agent systems.
+              </div>
+            </section>
 
-          <section id="references" class="section">
-            <div class="section-header">
-              <div class="section-index">07</div>
-              <div>
-                <p class="section-title">Selected references</p>
-                <h2>Source materials and further reading</h2>
+            <section id="thesis" class="section">
+              <div class="section-header">
+                <div class="section-index">01</div>
+                <div>
+                  <p class="section-title">Thesis</p>
+                  <h2>From bigger models to self-evolving systems</h2>
+                </div>
               </div>
-            </div>
-            <p>
-              This essay was synthesized from the <strong>DA.pptx</strong> keynote
-              and the companion memory notes, then reshaped into a single English
-              technical blog. The reference cards below are the most directly
-              relevant anchors for the ideas discussed above.
-            </p>
+              <div class="section-lead">
+                <p>
+                  The opening move in Darwin Agent is conceptual rather than technical. The
+                  deck does not begin with model scaling; it begins with the question of how
+                  an agent system can become capable of <strong>self-improvement</strong>.
+                  That shift matters because once an agent is treated as a system, progress is
+                  no longer measured only by benchmark scores. It is also measured by the
+                  quality of the control loop around the model.
+                </p>
+                <p>
+                  In that sense, the system becomes the unit of design. The model remains
+                  important, but it is no longer sufficient on its own. Tools, traces, memory,
+                  safety gates, evaluation, and operator-visible controls all become part of
+                  the performance story. The question is not just whether the model can answer;
+                  it is whether the system can learn, remember, and govern its own behavior.
+                </p>
+              </div>
+              <div class="quote">
+                <p>Self-evolving agents are engineered as systems, not prompted as one-off models.</p>
+              </div>
+            </section>
 
-            <div class="refs">
-              <a class="ref-card" href="https://huggingface.co/papers/2606.14249" target="_blank" rel="noreferrer">
-                <span class="label">Paper / project</span>
-                <h3>HarnessX</h3>
-                <p>A harness that compiles itself: a first-class, serializable behavior stack for agents.</p>
-              </a>
-              <a class="ref-card" href="https://darwin-agent.github.io/Mi-Memory/" target="_blank" rel="noreferrer">
-                <span class="label">Paper / project</span>
-                <h3>Mi-Memory</h3>
-                <p>A lifecycle memory framework for personal AI, centered on structure, expansion, evolution, and deployment.</p>
-              </a>
-              <div class="ref-card">
-                <span class="label">Research direction</span>
-                <h3>MemEvolveX</h3>
-                <p>Memory as a strategy artifact: configurable, diagnosable, gateable, and continuously improvable.</p>
+            <section id="harness" class="section">
+              <div class="section-header">
+                <div class="section-index">02</div>
+                <div>
+                  <p class="section-title">Harness</p>
+                  <h2>Harness as a first-class object</h2>
+                </div>
               </div>
-              <div class="ref-card">
-                <span class="label">Research direction</span>
-                <h3>MemFuse</h3>
-                <p>Cross-device, cross-user, cross-modal fused memory with provenance-aware evidence flow.</p>
+              <div class="section-lead">
+                <p>
+                  The harness is the architectural heart of the deck. Its premise is simple:
+                  behavior should be made explicit, measurable, and replaceable. Once that is
+                  true, the control stack becomes searchable in the same way model weights are
+                  searchable today.
+                </p>
+                <p>
+                  HarnessX sharpens the idea by separating the model from the execution
+                  policy. The same model can be run under different harnesses, and the same
+                  harness can be evaluated across different models. That separation matters
+                  because it turns behavior into an artifact that can be diffed, versioned,
+                  and improved without hiding the mechanism inside a prompt template.
+                </p>
               </div>
-              <div class="ref-card">
-                <span class="label">Research direction</span>
-                <h3>D²AICI / E2MEND</h3>
-                <p>Diagnostic-driven co-improvement loops for evidence-based memory evolution.</p>
-              </div>
-              <div class="ref-card">
-                <span class="label">Research direction</span>
-                <h3>World Model &amp; Multi-Agent studies</h3>
-                <p>Predictive components, hypergraph topology, and the conditions under which collective intelligence actually emerges.</p>
-              </div>
-            </div>
 
-            <p class="muted-note">
-              If you want, this page can be expanded later into a series with
-              dedicated posts for Harness, Memory, World Model, and Multi-Agent.
-            </p>
-          </section>
+              <div class="two-col">
+                <div class="card">
+                  <h3>What the harness needs to expose</h3>
+                  <ul>
+                    <li>Serialized behavior configuration that can be compared across versions.</li>
+                    <li>Composable pipelines for tools, sandboxing, traces, and memory access.</li>
+                    <li>Benchmarks that evaluate the harness, not only the base model.</li>
+                    <li>A bridge from trajectories to SFT / RL style training records.</li>
+                  </ul>
+                </div>
+                <div class="card accent">
+                  <h3>Why this is strategically important</h3>
+                  <ul>
+                    <li>Behavior improvements can be reused across tasks and model families.</li>
+                    <li>Failures become analyzable at the system level rather than anecdotal.</li>
+                    <li>Evolution can be searched, ranked, and verified.</li>
+                    <li>Open-source harnesses become infrastructure, not wrappers.</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section id="memory" class="section">
+              <div class="section-header">
+                <div class="section-index">03</div>
+                <div>
+                  <p class="section-title">Memory</p>
+                  <h2>Memory as continuity with governance</h2>
+                </div>
+              </div>
+              <div class="section-lead">
+                <p>
+                  If the harness determines how an agent acts, memory determines what the
+                  system can safely carry forward. The companion materials make this point
+                  sharper by treating memory as a lifecycle contract rather than a passive
+                  cache. Their four roles — Structure, Expansion, Evolution, and Deployment —
+                  describe how memory should behave across time, modality, and device.
+                </p>
+                <p>
+                  This framing is stronger than the familiar goal of “store more facts.” It
+                  insists that memory preserve source identity, provenance, and change
+                  history. In other words, memory is a governance layer: not only a place
+                  where information lives, but also a place where the system can explain what
+                  was remembered, why it was kept, and how it was allowed to change.
+                </p>
+              </div>
+
+              <div class="timeline">
+                <div class="timeline-item">
+                  <strong>Structure</strong>
+                  <p>Stable long-term user state and layered memory records.</p>
+                </div>
+                <div class="timeline-item">
+                  <strong>Expansion</strong>
+                  <p>MemSense and MemFuse bring visual, sensor, and cross-device evidence into memory.</p>
+                </div>
+                <div class="timeline-item">
+                  <strong>Evolution</strong>
+                  <p>D²AICI and E2MEND turn diagnosis into gated, reversible strategy changes.</p>
+                </div>
+                <div class="timeline-item">
+                  <strong>Deployment</strong>
+                  <p>LiteMem checks whether the same memory contract can survive edge and repo-native deployment.</p>
+                </div>
+              </div>
+
+              <div class="two-col">
+                <div class="card">
+                  <h3>What the materials keep emphasizing</h3>
+                  <ul>
+                    <li>Memory should preserve source identity and provenance.</li>
+                    <li>Evidence should be typed, not flattened into opaque text.</li>
+                    <li>Updates should be diagnosed and gated, not silently applied.</li>
+                    <li>Cross-device memory needs fusion rather than duplication.</li>
+                  </ul>
+                </div>
+                <div class="card accent">
+                  <h3>Representative outcomes</h3>
+                  <ul>
+                    <li>MemStack shows controlled gains on memory benchmarks.</li>
+                    <li>MemEvolveX improves memory strategy through explicit iteration.</li>
+                    <li>MemFuse connects atomic events, session context, and stable history.</li>
+                    <li>Mi-Memory argues for evidence-governed continuity, not just recall.</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section id="world-model" class="section">
+              <div class="section-header">
+                <div class="section-index">04</div>
+                <div>
+                  <p class="section-title">World model</p>
+                  <h2>Prediction only matters when it changes decisions</h2>
+                </div>
+              </div>
+              <div class="section-lead">
+                <p>
+                  The world-model section shifts the lens from the past to the near future.
+                  Prediction is not treated as a stand-alone research trophy. It is a
+                  decision-support component inside the harness — one that can guide
+                  planning, exploration, reflection, risk guarding, and evaluation.
+                </p>
+                <p>
+                  The most practical insight is that the smallest useful predictive mechanism
+                  is usually the right one. Some tasks need semantic prediction; others need
+                  visual affordance modeling, executable simulators, or hybrid systems. The
+                  right world model is therefore not universal. It is task-shaped, and it is
+                  only useful when it changes the next action.
+                </p>
+              </div>
+
+              <div class="pill-row" aria-label="Decision loop">
+                <span class="pill">Plan</span>
+                <span class="pill">Explore</span>
+                <span class="pill">Reflect</span>
+                <span class="pill">Guard</span>
+                <span class="pill">Evaluate</span>
+              </div>
+
+              <div class="quote">
+                <p>A useful world model does not predict everything. It predicts the difference that matters.</p>
+              </div>
+
+              <div class="two-col">
+                <div class="card">
+                  <h3>Where prediction earns its place</h3>
+                  <ul>
+                    <li>Planning, when the system needs rollout estimates before acting.</li>
+                    <li>Exploration, when uncertainty should influence which branch is tried.</li>
+                    <li>Reflection, when past traces must be summarized into future constraints.</li>
+                    <li>Safety, when anticipated failure should stop a risky action early.</li>
+                  </ul>
+                </div>
+                <div class="card accent">
+                  <h3>What to avoid</h3>
+                  <ul>
+                    <li>Prediction layers that cannot affect the policy.</li>
+                    <li>Heavy simulators where a lightweight forecast is sufficient.</li>
+                    <li>World models with no task boundary or evaluation signal.</li>
+                    <li>Architectures that blur prediction, memory, and planning into one opaque block.</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section id="multi-agent" class="section">
+              <div class="section-header">
+                <div class="section-index">05</div>
+                <div>
+                  <p class="section-title">Multi-agent</p>
+                  <h2>Collective intelligence is a topology problem</h2>
+                </div>
+              </div>
+              <div class="section-lead">
+                <p>
+                  The multi-agent material makes a point that is easy to miss: adding more
+                  agents does not automatically produce collective intelligence. If the
+                  interaction geometry collapses into a hub-and-spoke broadcast pattern, the
+                  system can still behave like a set of parallel monologues.
+                </p>
+                <p>
+                  The implication is not “more agents.” It is “better hyperedges.” Strong
+                  collaboration requires overlap, balanced participation, and enough triadic
+                  closure for information to move beyond a single dominant hub. In that sense,
+                  topology is the coordination medium.
+                </p>
+              </div>
+
+              <div class="stats">
+                <div class="stat">
+                  <strong>96.9%</strong>
+                  <span>Higher-order interactions reported in the Moltbook study</span>
+                </div>
+                <div class="stat">
+                  <strong>0.117</strong>
+                  <span>Edge overlap — a warning sign for topology collapse</span>
+                </div>
+                <div class="stat">
+                  <strong>0.863</strong>
+                  <span>Degree Gini — strong hub dominance in the interaction graph</span>
+                </div>
+              </div>
+
+              <div class="two-col">
+                <div class="card">
+                  <h3>Design implications</h3>
+                  <ul>
+                    <li>Do not build one central agent that sees everything.</li>
+                    <li>Prefer compact groups with local validation and controlled diffusion.</li>
+                    <li>Optimize for interaction quality, not only agent count.</li>
+                    <li>Measure the network, not just the single-node capability.</li>
+                  </ul>
+                </div>
+                <div class="card accent">
+                  <h3>What this suggests for practice</h3>
+                  <ul>
+                    <li>Use role separation only if the communication pattern remains interpretable.</li>
+                    <li>Track whether evidence is actually crossing agent boundaries.</li>
+                    <li>Watch for hub capture, where one node dominates reasoning and control.</li>
+                    <li>Prefer small, well-structured collaborative loops over noisy scale.</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section id="practice" class="section">
+              <div class="section-header">
+                <div class="section-index">06</div>
+                <div>
+                  <p class="section-title">Practice</p>
+                  <h2>From roadmap to implementation posture</h2>
+                </div>
+              </div>
+              <div class="section-lead">
+                <p>
+                  Read together, the two source materials point to an implementation posture
+                  rather than a single architecture. Build the harness so behavior can be
+                  compared. Build memory so evidence and identity persist. Build a world
+                  model so prediction informs action. Build multi-agent interaction so
+                  coordination does not degenerate as the system scales.
+                </p>
+                <p>
+                  The common thread is controlled evolution. A self-evolving agent should not
+                  merely learn more. It should learn in a way that can be observed, diagnosed,
+                  audited, and improved. That requirement is what turns the roadmap from a
+                  slogan into an engineering discipline.
+                </p>
+              </div>
+              <div class="quote">
+                <p>
+                  A self-evolving agent is a living system that can be observed, debugged,
+                  remembered, predicted, and improved.
+                </p>
+              </div>
+            </section>
+
+            <section id="references" class="section">
+              <div class="section-header">
+                <div class="section-index">07</div>
+                <div>
+                  <p class="section-title">References</p>
+                  <h2>Source materials and further reading</h2>
+                </div>
+              </div>
+              <div class="section-lead">
+                <p>
+                  This essay was synthesized from the <strong>DA.pptx</strong> keynote and the
+                  companion memory notes, then rewritten into a single English technical blog.
+                  The references below are the most directly relevant anchors for the ideas in
+                  the article.
+                </p>
+              </div>
+
+              <div class="refs">
+                <a class="ref-card" href="https://huggingface.co/papers/2606.14249" target="_blank" rel="noreferrer">
+                  <span class="label">Paper / project</span>
+                  <h3>HarnessX</h3>
+                  <p>A harness that compiles itself: a first-class, serializable behavior stack for agents.</p>
+                </a>
+                <a class="ref-card" href="https://darwin-agent.github.io/Mi-Memory/" target="_blank" rel="noreferrer">
+                  <span class="label">Paper / project</span>
+                  <h3>Mi-Memory</h3>
+                  <p>A lifecycle memory framework centered on structure, expansion, evolution, and deployment.</p>
+                </a>
+                <div class="ref-card">
+                  <span class="label">Research direction</span>
+                  <h3>MemEvolveX</h3>
+                  <p>Memory as a strategy artifact: configurable, diagnosable, gateable, and continuously improvable.</p>
+                </div>
+                <div class="ref-card">
+                  <span class="label">Research direction</span>
+                  <h3>MemFuse</h3>
+                  <p>Cross-device, cross-user, cross-modal fused memory with provenance-aware evidence flow.</p>
+                </div>
+                <div class="ref-card">
+                  <span class="label">Research direction</span>
+                  <h3>D²AICI / E2MEND</h3>
+                  <p>Diagnostic-driven co-improvement loops for evidence-based memory evolution.</p>
+                </div>
+                <div class="ref-card">
+                  <span class="label">Research direction</span>
+                  <h3>World Model &amp; Multi-Agent studies</h3>
+                  <p>Predictive components, hypergraph topology, and the conditions under which collective intelligence emerges.</p>
+                </div>
+              </div>
+
+              <p class="muted-note">
+                If you want, this page can later be split into a mini-series on Harness,
+                Memory, World Model, and Multi-Agent design.
+              </p>
+            </section>
+          </div>
         </article>
 
         <aside class="sidebar" aria-label="Table of contents and notes">
@@ -1010,20 +1062,19 @@
           </div>
 
           <div class="sidebar-card">
-            <h3>Why this article works</h3>
+            <h3>Why this version is stronger</h3>
             <ul class="sidebar-list">
-              <li>It reads like a published technical essay, not a project memo.</li>
-              <li>It converts slide logic into a clean narrative arc.</li>
-              <li>It leaves room for future articles in the same series.</li>
+              <li>It reads more like a published article and less like a project memo.</li>
+              <li>It uses a more restrained, paper-like visual rhythm.</li>
+              <li>It keeps the architecture legible while tightening the prose.</li>
             </ul>
           </div>
 
           <div class="sidebar-card">
             <h3>Source note</h3>
             <p>
-              The page is a synthesis of the <strong>DA.pptx</strong> keynote and
-              the <strong>Mi-Memory</strong> technical report. The wording is
-              newly written to match a formal blog tone.
+              The page is a synthesis of <strong>DA.pptx</strong> and the memory research
+              materials. The wording is newly written to match a formal blog tone.
             </p>
           </div>
         </aside>
