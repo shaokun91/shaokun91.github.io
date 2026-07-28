@@ -2,75 +2,115 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Blog · Darwin Agent</title>
-    <meta
-      name="description"
-      content="Blog index for Darwin Agent and related technical essays."
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Blog index for Kun Shao's technical essays on self-evolving agents and related systems." />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Blog | Kun Shao</title>
     <style>
       :root {
-        --bg: #f7f5f0;
-        --surface: #ffffff;
-        --surface-soft: #fbfbf8;
-        --text: #17212f;
-        --muted: #637083;
-        --line: #e5e8ef;
-        --line-strong: #cfd6e0;
-        --accent: #214ce5;
-        --accent-2: #146c5b;
-        --shadow: 0 20px 48px rgba(15, 23, 42, 0.06);
+        --global-bg-color: #ffffff;
+        --global-card-bg-color: #ffffff;
+        --global-code-bg-color: rgba(113, 37, 207, 0.055);
+        --global-text-color: #111111;
+        --global-text-color-light: #828282;
+        --global-theme-color: #7125cf;
+        --global-hover-color: #b509ac;
+        --global-divider-color: rgba(0, 0, 0, 0.1);
+        --global-footer-bg-color: #1c1c1d;
+        --global-footer-text-color: #e8e8e8;
+        --nav-height: 56px;
       }
       * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
       body {
         margin: 0;
         min-height: 100vh;
-        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
-          "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-        background:
-          radial-gradient(circle at top left, rgba(33, 76, 229, 0.035), transparent 24%),
-          radial-gradient(circle at bottom right, rgba(20, 108, 91, 0.03), transparent 22%),
-          var(--bg);
-        color: var(--text);
-        line-height: 1.75;
+        padding-top: var(--nav-height);
+        padding-bottom: 70px;
+        color: var(--global-text-color);
+        background: var(--global-bg-color);
+        font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+          "Microsoft YaHei", "Noto Sans CJK SC", Helvetica, Arial, sans-serif;
+        line-height: 1.72;
       }
-      a { color: inherit; text-decoration: none; }
-      .wrap {
-        width: min(1100px, calc(100% - 32px));
+      a { color: var(--global-theme-color); text-decoration: none; }
+      a:hover { color: var(--global-hover-color); text-decoration: underline; }
+      :focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 3px; }
+
+      .navbar {
+        position: fixed;
+        inset: 0 0 auto 0;
+        z-index: 1000;
+        height: var(--nav-height);
+        border-bottom: 1px solid var(--global-divider-color);
+        background: rgba(255, 255, 255, 0.95);
+        background: color-mix(in srgb, var(--global-bg-color) 95%, transparent);
+        backdrop-filter: saturate(180%) blur(12px);
+      }
+      .nav-container {
+        width: min(1140px, calc(100% - 32px));
+        height: 100%;
         margin: 0 auto;
-        padding: 34px 0 56px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+      .navbar-brand {
+        color: var(--global-text-color);
+        font-size: 1.05rem;
+        font-weight: 300;
+      }
+      .nav-links {
+        display: flex;
+        gap: 18px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 0.95rem;
+      }
+      .nav-links a { color: var(--global-text-color); text-decoration: none; }
+      .nav-links a.active,
+      .nav-links a:hover { color: var(--global-theme-color); text-decoration: none; }
+      .nav-links a.active { font-weight: 700; }
+
+      .wrap {
+        width: min(1140px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 38px 0 56px;
       }
       .hero,
       .card,
       .footer {
-        background: var(--surface);
-        border: 1px solid var(--line);
-        border-radius: 24px;
-        box-shadow: var(--shadow);
+        background: var(--global-card-bg-color);
+        border: 1px solid var(--global-divider-color);
+        border-radius: 12px;
       }
       .hero {
-        padding: 32px;
+        padding: 34px 32px;
       }
       .eyebrow {
         margin: 0 0 10px;
-        color: var(--accent);
-        text-transform: uppercase;
-        letter-spacing: 0.18em;
+        color: var(--global-theme-color);
         font-size: 0.78rem;
         font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
       }
       h1 {
         margin: 0 0 12px;
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: clamp(2.2rem, 5vw, 4.2rem);
+        font-family: "Roboto Slab", Georgia, "Times New Roman", serif;
+        font-size: clamp(2.2rem, 5vw, 4.1rem);
+        font-weight: 300;
         line-height: 1.05;
-        letter-spacing: -0.04em;
+        letter-spacing: -0.05em;
       }
       .lede {
         margin: 0;
         max-width: 72ch;
-        color: var(--muted);
-        font-size: 1.03rem;
+        color: var(--global-text-color-light);
+        font-size: 1.02rem;
       }
       .meta {
         display: flex;
@@ -79,80 +119,82 @@
         margin-top: 22px;
       }
       .pill {
-        padding: 9px 13px;
+        padding: 8px 12px;
         border-radius: 999px;
-        background: var(--surface-soft);
-        border: 1px solid var(--line);
-        color: var(--text);
-        font-size: 0.92rem;
+        background: var(--global-code-bg-color);
+        color: var(--global-text-color);
+        font-size: 0.9rem;
         font-weight: 600;
       }
       .section-title {
-        margin: 28px 0 14px;
-        color: var(--muted);
+        margin: 30px 0 14px;
+        color: var(--global-text-color-light);
+        font-size: 0.78rem;
+        font-weight: 800;
         letter-spacing: 0.15em;
         text-transform: uppercase;
-        font-size: 0.8rem;
-        font-weight: 800;
       }
       .grid {
         display: grid;
-        grid-template-columns: 1.35fr 0.65fr;
+        grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
         gap: 18px;
       }
-      .card {
-        padding: 24px;
-      }
+      .card { padding: 24px; }
       .card h2 {
         margin: 0 0 10px;
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: 1.62rem;
-        line-height: 1.15;
+        font-family: "Roboto Slab", Georgia, "Times New Roman", serif;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 1.2;
       }
-      .card p {
-        margin: 0;
-        color: var(--muted);
-      }
-      .card .tag {
+      .card p { margin: 0; color: var(--global-text-color-light); }
+      .tag {
         display: inline-flex;
         margin-bottom: 12px;
-        color: var(--accent-2);
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
+        color: var(--global-theme-color);
         font-size: 0.72rem;
         font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
       }
       .actions {
-        margin-top: 18px;
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
+        margin-top: 18px;
       }
       .button {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        padding: 11px 16px;
+        padding: 10px 15px;
         border-radius: 999px;
-        background: linear-gradient(135deg, var(--accent), #6f8cff);
+        background: var(--global-theme-color);
         color: white;
-        font-weight: 800;
+        font-weight: 700;
+        text-decoration: none;
       }
+      .button:hover { color: white; background: var(--global-hover-color); text-decoration: none; }
       .button.secondary {
-        background: var(--surface-soft);
-        color: var(--text);
-        border: 1px solid var(--line);
+        background: transparent;
+        color: var(--global-text-color);
+        border: 1px solid var(--global-divider-color);
+      }
+      .button.secondary:hover {
+        color: var(--global-theme-color);
+        border-color: var(--global-theme-color);
+        background: transparent;
       }
       .list {
         margin: 0;
         padding-left: 18px;
-        color: var(--muted);
+        color: var(--global-text-color-light);
       }
       .list li { margin: 10px 0; }
       .footer {
         margin-top: 18px;
-        padding: 20px 24px;
-        color: var(--muted);
+        padding: 18px 24px;
+        color: var(--global-text-color-light);
         display: flex;
         justify-content: space-between;
         gap: 16px;
@@ -163,23 +205,39 @@
         .hero,
         .card,
         .footer { padding-left: 20px; padding-right: 20px; }
+        .nav-container { width: min(100% - 22px, 1140px); }
+        .nav-links { gap: 10px; font-size: 0.84rem; }
+        .nav-links .optional { display: none; }
       }
     </style>
   </head>
   <body>
+    <header>
+      <nav id="navbar" class="navbar" aria-label="Main navigation">
+        <div class="nav-container">
+          <a class="navbar-brand" href="../"><b>Kun</b> Shao</a>
+          <ul class="nav-links">
+            <li><a href="../">About</a></li>
+            <li><a class="active" href="./">Blog</a></li>
+            <li class="optional"><a href="../publications/">Publications</a></li>
+            <li class="optional"><a href="../cv/">CV</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
     <main class="wrap">
       <section class="hero">
-        <p class="eyebrow">Blog Directory</p>
+        <p class="eyebrow">Blog / Technical Essays</p>
         <h1>Darwin Agent</h1>
         <p class="lede">
-          A polished technical blog series on self-evolving agent systems. The featured
-          article synthesizes the <strong>DA.pptx</strong> keynote and the companion memory
-          materials into a publication-style English essay on harness, memory, world models,
-          and multi-agent topology.
+          A distill-style blog series on self-evolving agent systems. The featured article reads
+          like a publication page: clear thesis, tight typography, left-side contents, and a
+          system-level framework for harness, memory, world model, and multi-agent design.
         </p>
         <div class="meta">
-          <span class="pill">English technical writing</span>
-          <span class="pill">GitHub Pages</span>
+          <span class="pill">Academic article style</span>
+          <span class="pill">Distill / al-folio inspired</span>
           <span class="pill">Harness · Memory · World Model · Multi-Agent</span>
         </div>
       </section>
@@ -190,11 +248,9 @@
           <span class="tag">Latest article</span>
           <h2>Darwin Agent: The What and When of Self-Evolving Agents</h2>
           <p>
-            This article argues that self-evolving agents should be engineered as systems,
-            not prompted as one-off models. It walks through the harness as a first-class
-            object, memory as a lifecycle contract, world models as decision-support
-            components, and multi-agent interaction as a topology problem — in a more
-            formal, publication-style layout.
+            A long-form technical essay that frames self-evolution as a governed system problem,
+            not a prompt trick. It walks from the dual promise of adaptation and persistence to a
+            3×3 matrix of what changes and when it should survive.
           </p>
           <div class="actions">
             <a class="button" href="./2026/self-evolving-agents/">Read the blog</a>
@@ -204,17 +260,17 @@
         <aside class="card">
           <span class="tag">In this series</span>
           <ul class="list">
-            <li>Why agent performance is a system property</li>
-            <li>How to make behavior configurable and evolvable</li>
-            <li>How memory becomes governance, not just storage</li>
-            <li>How prediction changes action</li>
-            <li>Why topology determines collective intelligence</li>
+            <li>What should live in files, harnesses, and weights</li>
+            <li>How persistence changes from session to population</li>
+            <li>Why memory is governance, not just storage</li>
+            <li>How prediction becomes useful only when it changes action</li>
+            <li>Why topology determines whether agents can think together</li>
           </ul>
         </aside>
       </div>
 
       <div class="footer">
-        <span>Darwin Agent · Shaokun91 personal homepage</span>
+        <span>Kun Shao · Personal homepage</span>
         <span>Built for GitHub Pages</span>
       </div>
     </main>
