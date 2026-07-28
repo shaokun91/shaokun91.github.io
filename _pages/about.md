@@ -225,13 +225,13 @@ Research focus: <strong>Agentic AI</strong> — Harness, memory, reinforcement l
   <div class="timeline-details">
     Leading the Agent Research team, driving agent architecture design and product deployment for Xiaomi's Xiaoai assistant across mobile, automotive, IoT, and wearable platforms.
     <br><br>
-    <strong>(1) Agent Harness </strong> — <a href="https://darwin-agent.github.io/HarnessX/">HarnessX</a>:Compose. Adapt. Evolve. Open-sourced a composable agent orchestration framework. Nine orthogonal dimensions are independently configurable, replaceable, and optimizable, supporting meta-optimization and RL-based agent evolution.
+    <strong>(1) Agent Harness </strong> — <a href="https://darwin-agent.github.io/HarnessX/">HarnessX</a>: Compose. Adapt. Evolve. Open-sourced a composable agent orchestration framework. Nine orthogonal dimensions are independently configurable, replaceable, and optimizable, supporting meta-optimization and RL-based agent evolution.
     <br><br>
     <strong>(2) Agent Memory </strong> — <a href="https://darwin-agent.github.io/HarnessX/">Mi-Memory</a>: A Lifecycle Memory Framework for Personal AI. Led research and production deployment of agentic memory for Xiaoai. Built full-stack architecture (Multimodal Memory Encoding, Cross-Device Memory Persistence, Self-Evolving Lifecycle Management). Deployed on Xiaomi's intelligent automotive cockpit, smart glasses and other products. 
     <br><br>
-    <strong>(3) Agent World Model</strong> — <a href="https://github.com/Darwin-Agent/awesome-world-models-for-digital-agents">Awesome World Models for Digital Agents</a> Digital Agents Meet World Models: A Survey.
+    <strong>(3) Agent World Model</strong> — <a href="https://github.com/Darwin-Agent/awesome-world-models-for-digital-agents">Awesome World Models for Digital Agents</a>. Digital Agents Meet World Models: A Survey.
     <br><br>
-    <strong>(4) Agentic AI Research</strong> — Led multi-agent and agentic world-model research; explore sample-efficient test-time Agentic RL.
+    <strong>(4) Self-evolving Agent Research</strong> — LLM-based Multi-agent Systems, Sample-efficient Test-time Agentic RL, Physical AI Harness, Agent Search.
   </div>
 </div>
 
