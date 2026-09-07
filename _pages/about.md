@@ -205,7 +205,7 @@ Research focus: <strong>Agentic AI</strong> — Harness, memory, reinforcement l
 <h2 class="section-title"><i class="fa fa-star"></i>Research Highlights</h2>
 
 <div class="highlight-grid">
-  <div class="highlight-card"><i class="fa fa-trophy"></i> <strong>2x Benchmark #1:</strong> AndroidWorld (GUI Agent, 2025) & GAIA (Deep Research Agent, June 2025)</div>
+  <div class="highlight-card"><i class="fa fa-trophy"></i> <strong>3x Benchmark #1:</strong> AndroidWorld (GUI Agent, 2025) & GAIA (Deep Research Agent, June 2025) & IJCAI CAR-bench Challenge (Agent Skill, Aug. 2026) </div>
   <div class="highlight-card"><i class="fa fa-flask"></i> <strong>Nature MI 2026:</strong> LLM-based robot OS framework for embodied AI</div>
   <div class="highlight-card"><i class="fa fa-code-branch"></i> <strong><a href="https://darwin-agent.github.io/HarnessX/">HarnessX</a>:</strong> Open-source agent harness & self-evolution system at Xiaomi</div>
   <div class="highlight-card"><i class="fa fa-code-branch"></i> <strong><a href="https://darwin-agent.github.io/HarnessX/">Mi-Memory</a>:</strong> A Lifecycle Memory Framework for Personal AI at Xiaomi</div>
