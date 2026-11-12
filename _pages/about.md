@@ -231,9 +231,9 @@ Research focus: <strong>Agentic AI</strong> — Harness, memory, reinforcement l
     <br><br>
     <strong>(2) Agent Memory </strong> — <a href="https://darwin-agent.github.io/Mi-Memory/">Mi-Memory</a>: A Lifecycle Memory Framework for Personal AI. Led research and production deployment of agentic memory for Xiaoai. Built full-stack architecture (Multimodal Memory Encoding, Cross-Device Memory Persistence, Self-Evolving Lifecycle Management). Deployed on Xiaomi's intelligent automotive cockpit, smart glasses and other products. 
     <br><br>
-    <strong>(3) Agent World Model</strong> — <a href="https://github.com/Darwin-Agent/awesome-world-models-for-digital-agents">Awesome World Models for Digital Agents</a>. Digital Agents Meet World Models: A Survey. <a href="https://darwin-agent.github.io/WIA/">World Intelligence Agent</a>:</strong> World Modeling and Action Learning for Digital Agents.
+    <strong>(3) Agent World Model</strong> — <a href="https://github.com/Darwin-Agent/awesome-world-models-for-digital-agents">Awesome World Models for Digital Agents</a>. Digital Agents Meet World Models: A Survey. <a href="https://darwin-agent.github.io/WIA/">World Intelligence Agent</a>: World Modeling and Action Learning for Digital Agents.
     <br><br>
-    <strong>(4) Physical RSI </strong> — <a href="https://darwin-agent.github.io/HarnessPAI/">HarnessPAI: An Evolving Harness for Physical AI</a>.
+    <strong>(4) Physical RSI </strong> — <a href="https://darwin-agent.github.io/HarnessPAI/">HarnessPAI: An Evolving Harness for Physical AI</a>. A model- and embodiment-agnostic harness that treats code as the executable and evolvable interface around an action primitive. 
     <br><br>
     <strong>(5) Self-evolving Agent</strong> — <a href="https://darwin-agent.github.io/Car-bench-TRACE/">TRACE</a>(Agent Skill evolution), <a href="https://github.com/Darwin-Agent/topological-collapse-agent-societies">Topological Collapse in AI Agent Societies</a>(LLM-based Multi-agent Systems), Sample-efficient Agentic RL, Physical AI Harness, Agent Search.
   </div>
@@ -351,7 +351,6 @@ Research focus: <strong>Agentic AI</strong> — Harness, memory, reinforcement l
 
 <ul class="talk-list">
 <li>RLChina, Shanghai, 2026</li>
-<li>The 4th CCF Conference on Multi-Agent Systems (CCMAS), Suzhou, 2025</li>
 <li>The 4th CCF Conference on Multi-Agent Systems (CCMAS), Suzhou, 2025</li>
 <li>The 20th Chinese Conference on Machine Learning (CCML), Taiyuan, 2025</li>
 <li>Beijing Institute for General Artificial Intelligence, Beijing, 2025</li>
