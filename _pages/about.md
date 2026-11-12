@@ -193,7 +193,7 @@ redirect_from:
 </style>
 
 <div class="bio-intro">
-Tech Expert at <strong>Beijing Xiaomi Mobile Software Co., Ltd</strong>, leading the Agent Research team <a href="https://github.com/Darwin-Agent">Darwin Agent</a>. Previously Tech Expert and AI Agent Team Lead at <strong>Huawei London Research Centre</strong>, working with <a href="https://scholar.google.com/citations?user=FCJVUYgAAAAJ&hl=en">Prof. Jianye Hao</a> and <a href="https://scholar.google.com/citations?user=wIE1tY4AAAAJ&hl=en">Prof. Jun Wang</a>. Ph.D. from the <strong>Institute of Automation, Chinese Academy of Sciences</strong> (advisor: <a href="https://scholar.google.com/citations?user=RxvYlNQAAAAJ&hl=en">Prof. Dongbin Zhao</a>).
+Tech Expert at <strong>Beijing Xiaomi Mobile Software Co., Ltd</strong>, leading the Agent Research team <a href="https://shaokun91.github.io/darwin-agent-website/">Darwin Agent</a>. Previously Tech Expert and AI Agent Team Lead at <strong>Huawei London Research Centre</strong>, working with <a href="https://scholar.google.com/citations?user=FCJVUYgAAAAJ&hl=en">Prof. Jianye Hao</a> and <a href="https://scholar.google.com/citations?user=wIE1tY4AAAAJ&hl=en">Prof. Jun Wang</a>. Ph.D. from the <strong>Institute of Automation, Chinese Academy of Sciences</strong> (advisor: <a href="https://scholar.google.com/citations?user=RxvYlNQAAAAJ&hl=en">Prof. Dongbin Zhao</a>).
 <br><br>
 Research focus: <strong>Agentic AI</strong> — Harness, memory, reinforcement learning, and multi-agent systems — with production deployments on smartphones, automotive cockpits, IoT, and smart glasses&watches. <strong>50+ publications</strong> (Nature MI, ICLR, CVPR, NeurIPS, ICML).
 </div>
@@ -207,6 +207,8 @@ Research focus: <strong>Agentic AI</strong> — Harness, memory, reinforcement l
 <div class="highlight-grid">
   <div class="highlight-card"><i class="fa fa-trophy"></i> <strong>3x Benchmark #1:</strong> AndroidWorld（GUI Agent, 2025) & GAIA (Deep Research Agent, June 2025) & IJCAI CAR-bench Challenge (Agent Skill, Aug. 2026) </div>
   <div class="highlight-card"><i class="fa fa-flask"></i> <strong>Nature MI 2026:</strong> LLM-based robot OS framework for embodied AI</div>
+  <div class="highlight-card"><i class="fa fa-code-branch"></i> <strong><a href="https://darwin-agent.github.io/WIA/">World Intelligence Agent</a>:</strong> World Modeling and Action Learning for Digital Agents at Xiaomi</div>
+  <div class="highlight-card"><i class="fa fa-code-branch"></i> <strong><a href="https://darwin-agent.github.io/HarnessPAI/">HarnessPAI</a>:</strong> An Evolving Harness for Physical AI at Xiaomi</div>
   <div class="highlight-card"><i class="fa fa-code-branch"></i> <strong><a href="https://darwin-agent.github.io/HarnessX/">HarnessX</a>:</strong> Open-source agent harness & self-evolution system at Xiaomi</div>
   <div class="highlight-card"><i class="fa fa-code-branch"></i> <strong><a href="https://darwin-agent.github.io/HarnessX/">Mi-Memory</a>:</strong> A Lifecycle Memory Framework for Personal AI at Xiaomi</div>
   <div class="highlight-card"><i class="fa fa-star"></i> <strong>2,000+ GitHub Stars</strong> on Deep Research agent and Agent Harness toolkit</div>
@@ -229,9 +231,11 @@ Research focus: <strong>Agentic AI</strong> — Harness, memory, reinforcement l
     <br><br>
     <strong>(2) Agent Memory </strong> — <a href="https://darwin-agent.github.io/Mi-Memory/">Mi-Memory</a>: A Lifecycle Memory Framework for Personal AI. Led research and production deployment of agentic memory for Xiaoai. Built full-stack architecture (Multimodal Memory Encoding, Cross-Device Memory Persistence, Self-Evolving Lifecycle Management). Deployed on Xiaomi's intelligent automotive cockpit, smart glasses and other products. 
     <br><br>
-    <strong>(3) Agent World Model</strong> — <a href="https://github.com/Darwin-Agent/awesome-world-models-for-digital-agents">Awesome World Models for Digital Agents</a>. Digital Agents Meet World Models: A Survey.
+    <strong>(3) Agent World Model</strong> — <a href="https://github.com/Darwin-Agent/awesome-world-models-for-digital-agents">Awesome World Models for Digital Agents</a>. Digital Agents Meet World Models: A Survey. <a href="https://darwin-agent.github.io/WIA/">World Intelligence Agent</a>:</strong> World Modeling and Action Learning for Digital Agents.
     <br><br>
-    <strong>(4) Self-evolving Agent</strong> — <a href="https://darwin-agent.github.io/Car-bench-TRACE/">TRACE</a>(Agent Skill evolution), <a href="https://github.com/Darwin-Agent/topological-collapse-agent-societies">Topological Collapse in AI Agent Societies</a>(LLM-based Multi-agent Systems), Sample-efficient Agentic RL, Physical AI Harness, Agent Search.
+    <strong>(4) Physical RSI </strong> — <a href="https://darwin-agent.github.io/HarnessPAI/">HarnessPAI: An Evolving Harness for Physical AI</a>.
+    <br><br>
+    <strong>(5) Self-evolving Agent</strong> — <a href="https://darwin-agent.github.io/Car-bench-TRACE/">TRACE</a>(Agent Skill evolution), <a href="https://github.com/Darwin-Agent/topological-collapse-agent-societies">Topological Collapse in AI Agent Societies</a>(LLM-based Multi-agent Systems), Sample-efficient Agentic RL, Physical AI Harness, Agent Search.
   </div>
 </div>
 
@@ -288,7 +292,7 @@ Research focus: <strong>Agentic AI</strong> — Harness, memory, reinforcement l
 <h2 class="section-title"><i class="fa fa-file-lines"></i>Selected Publications</h2>
 
 <p style="font-size:0.9em; color:#666;">
-<i class="ai ai-google-scholar" style="color:#4285F4;"></i> Full list: <a href="https://scholar.google.com/citations?user=4CNMLWAAAAAJ&hl=en">Google Scholar</a> · 50+ papers · 3,000+ citations
+<i class="ai ai-google-scholar" style="color:#4285F4;"></i> Full list: <a href="https://scholar.google.com/citations?user=4CNMLWAAAAAJ&hl=en">Google Scholar</a> · 50+ papers · 4,000+ citations
 </p>
 
 <div class="pub-year">2026</div>
@@ -346,6 +350,9 @@ Research focus: <strong>Agentic AI</strong> — Harness, memory, reinforcement l
 <h2 class="section-title"><i class="fa fa-microphone"></i>Invited Talks</h2>
 
 <ul class="talk-list">
+<li>RLChina, Shanghai, 2026</li>
+<li>The 4th CCF Conference on Multi-Agent Systems (CCMAS), Suzhou, 2025</li>
+<li>The 4th CCF Conference on Multi-Agent Systems (CCMAS), Suzhou, 2025</li>
 <li>The 20th Chinese Conference on Machine Learning (CCML), Taiyuan, 2025</li>
 <li>Beijing Institute for General Artificial Intelligence, Beijing, 2025</li>
 <li>National University of Singapore (NUS), Singapore, 2025</li>
