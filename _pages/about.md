@@ -193,7 +193,7 @@ redirect_from:
 </style>
 
 <div class="bio-intro">
-Tech Expert at <strong>Beijing Xiaomi Mobile Software Co., Ltd</strong>, leading the Agent Research team <a href="https://shaokun91.github.io/darwin-agent-website/">Darwin Agent</a>. Previously Tech Expert and AI Agent Team Lead at <strong>Huawei London Research Centre</strong>, working with <a href="https://scholar.google.com/citations?user=FCJVUYgAAAAJ&hl=en">Prof. Jianye Hao</a> and <a href="https://scholar.google.com/citations?user=wIE1tY4AAAAJ&hl=en">Prof. Jun Wang</a>. Ph.D. from the <strong>Institute of Automation, Chinese Academy of Sciences</strong> (advisor: <a href="https://scholar.google.com/citations?user=RxvYlNQAAAAJ&hl=en">Prof. Dongbin Zhao</a>).
+Tech Expert at <strong>Beijing Xiaomi Mobile Software Co., Ltd</strong>, leading the Agent Research team <a href="https://darwin-agent.github.io/">Darwin Agent</a>. Previously Tech Expert and AI Agent Team Lead at <strong>Huawei London Research Centre</strong>, working with <a href="https://scholar.google.com/citations?user=FCJVUYgAAAAJ&hl=en">Prof. Jianye Hao</a> and <a href="https://scholar.google.com/citations?user=wIE1tY4AAAAJ&hl=en">Prof. Jun Wang</a>. Ph.D. from the <strong>Institute of Automation, Chinese Academy of Sciences</strong> (advisor: <a href="https://scholar.google.com/citations?user=RxvYlNQAAAAJ&hl=en">Prof. Dongbin Zhao</a>).
 <br><br>
 Research focus: <strong>Agentic AI</strong> — Harness, memory, reinforcement learning, and multi-agent systems — with production deployments on smartphones, automotive cockpits, IoT, and smart glasses&watches. <strong>50+ publications</strong> (Nature MI, ICLR, CVPR, NeurIPS, ICML).
 </div>
